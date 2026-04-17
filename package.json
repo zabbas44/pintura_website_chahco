@@ -1,0 +1,22 @@
+{
+  "name": "amjad-pintura",
+  "version": "1.0.0",
+  "description": "Premium painting and decoration website for Amjad Pintura",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js"
+  },
+  "keywords": [
+    "painting",
+    "barcelona",
+    "express",
+    "tailwind"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2",
+    "nodemailer": "^6.10.0"
+  }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-meta-title="contact.meta.title">Contact | Amjad Pintura Barcelona</title>
+    <meta
+      name="description"
+      data-meta-description="contact.meta.description"
+      content="Request a free painting quote from Amjad Pintura in Barcelona. Contact us for residential and commercial projects."
+    />
+    <link rel="canonical" href="https://amjadpintura.com/contact" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
+  <body data-page="contact">
+    <div class="site-shell">
+      <div data-nav></div>
+      <main class="pb-10 pt-24">
+        <section
+          class="page-hero"
+          style="--page-hero-image: url('https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1800&q=80')"
+        >
+          <div class="page-hero-content">
+            <p class="text-sm font-semibold uppercase tracking-[0.28em] text-[#A7D1FF] reveal" data-i18n="contact.tag">Contact</p>
+            <h1 class="font-display mt-4 max-w-3xl text-5xl font-semibold leading-tight text-white reveal" data-i18n="contact.title">Request your free quote for painting in Barcelona</h1>
+            <p class="mt-5 max-w-2xl text-base leading-8 text-slate-200 reveal" data-i18n="contact.body">
+              Tell us about your project and we will get back to you with the next steps, timing, and a tailored estimate.
+            </p>
+          </div>
+        </section>
+
+        <section class="mx-auto mt-14 grid max-w-7xl gap-8 px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
+          <div class="reveal">
+            <div class="space-y-5">
+              <div class="section-card rounded-[1.75rem] p-5">
+                <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500" data-i18n="form.email">Email</p>
+                <p class="mt-2 text-base font-medium text-[#0E2A47]">example@amjadpintura.com</p>
+              </div>
+              <div class="section-card rounded-[1.75rem] p-5">
+                <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500" data-i18n="form.phone">Phone</p>
+                <p class="mt-2 text-base font-medium text-[#0E2A47]">+34 600 123 456</p>
+              </div>
+              <div class="section-card rounded-[1.75rem] p-5">
+                <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500" data-i18n="contact.address.label">Address</p>
+                <p class="mt-2 text-base font-medium text-[#0E2A47]" data-i18n="contact.address.value">Carrer de Mallorca 410, 08013 Barcelona, Spain</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-card reveal rounded-[2rem] p-6 shadow-2xl lg:p-8">
+            <form data-contact-form class="grid gap-4">
+              <div class="grid gap-4 md:grid-cols-2">
+                <label class="grid gap-2 text-sm font-medium text-[#0E2A47]">
+                  <span data-i18n="form.name">Name</span>
+                  <input name="name" type="text" required class="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-[#59A5FF]" />
+                </label>
+                <label class="grid gap-2 text-sm font-medium text-[#0E2A47]">
+                  <span data-i18n="form.email">Email</span>
+                  <input name="email" type="email" required class="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-[#59A5FF]" />
+                </label>
+              </div>
+              <label class="grid gap-2 text-sm font-medium text-[#0E2A47]">
+                <span data-i18n="form.phone">Phone</span>
+                <input name="phone" type="tel" required class="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-[#59A5FF]" />
+              </label>
+              <label class="grid gap-2 text-sm font-medium text-[#0E2A47]">
+                <span data-i18n="form.message">Message</span>
+                <textarea name="message" rows="6" required class="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-[#59A5FF]"></textarea>
+              </label>
+              <button type="submit" class="btn-primary mt-2 rounded-full bg-[#0E2A47] px-7 py-4 text-sm font-semibold text-white shadow-xl shadow-slate-300/50" data-i18n="form.submit">
+                Send Request
+              </button>
+              <p data-form-status class="text-sm text-slate-500"></p>
+            </form>
+          </div>
+        </section>
+
+        <section class="mx-auto mt-12 max-w-7xl px-6 lg:px-8">
+          <div class="contact-map reveal overflow-hidden rounded-[2rem] border border-white/50 bg-white/80 shadow-2xl">
+            <div class="h-[28rem]">
+              <iframe
+                data-i18n-title="contact.mapTitle"
+                title="Map placeholder for Amjad Pintura"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=Barcelona%2C%20Spain&z=12&output=embed"
+              ></iframe>
+            </div>
+          </div>
+        </section>
+      </main>
+      <div data-footer></div>
+    </div>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
