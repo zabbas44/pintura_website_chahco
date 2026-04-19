@@ -1,6 +1,46 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
 const path = require("path");
+const fs = require("fs");
+
+function loadEnvFile() {
+  const envPath = path.join(__dirname, "..", ".env");
+
+  if (!fs.existsSync(envPath)) {
+    return;
+  }
+
+  const content = fs.readFileSync(envPath, "utf8");
+
+  content.split(/\r?\n/).forEach((line) => {
+    const trimmed = line.trim();
+
+    if (!trimmed || trimmed.startsWith("#")) {
+      return;
+    }
+
+    const separatorIndex = trimmed.indexOf("=");
+    if (separatorIndex === -1) {
+      return;
+    }
+
+    const key = trimmed.slice(0, separatorIndex).trim();
+    let value = trimmed.slice(separatorIndex + 1).trim();
+
+    if (
+      (value.startsWith('"') && value.endsWith('"')) ||
+      (value.startsWith("'") && value.endsWith("'"))
+    ) {
+      value = value.slice(1, -1);
+    }
+
+    if (!(key in process.env)) {
+      process.env[key] = value;
+    }
+  });
+}
+
+loadEnvFile();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -63,10 +103,10 @@ app.post("/api/contact", async (req, res) => {
 
   try {
     const { transporter, mode } = await createTransporter();
-    const recipient = process.env.CONTACT_TO || "example@amjadpintura.com";
+    const recipient = process.env.CONTACT_TO || "amjad@amjadpintura.com";
 
     const info = await transporter.sendMail({
-      from: process.env.CONTACT_FROM || "Amjad Pintura Website <no-reply@amjadpintura.com>",
+      from: process.env.CONTACT_FROM || "Amjad Pintura Website <amjad@amjadpintura.com>",
       to: recipient,
       replyTo: `${name} <${email}>`,
       subject: `New quote request from ${name}`,

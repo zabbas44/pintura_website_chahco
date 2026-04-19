@@ -1,6 +1,6 @@
 const translations = {
   en: {
-    "nav.tagline": "Barcelona · Painting & Decoration",
+    "nav.tagline": "Barcelona - Painting & Decoration",
     "nav.home": "Home",
     "nav.services": "Services",
     "nav.projects": "Projects",
@@ -11,10 +11,10 @@ const translations = {
     "nav.language": "Language",
     "nav.lang": "ES",
     "footer.description":
-      "Premium painting and decoration services in Barcelona, delivering refined finishes for homes, offices, and commercial spaces.",
+      "Premium painting and decoration services in Barcelona for hotels, buildings, factories, apartments, and commercial spaces.",
     "footer.navigation": "Navigation",
     "footer.contact": "Contact",
-    "footer.hours": "Mon - Sat · 8:00 to 19:00",
+    "footer.hours": "Mon - Sat - 8:00 to 19:00",
     "footer.location": "Barcelona, Spain",
     "form.sending": "Sending request...",
     "form.name": "Name",
@@ -22,64 +22,157 @@ const translations = {
     "form.phone": "Phone",
     "form.message": "Message",
     "form.submit": "Send Request",
-    "home.meta.title": "Amjad Pintura | Professional Painting & Decoration Services in Barcelona, Spain",
+    "home.meta.title": "Amjad Pintura | Large-Scale Painting Services in Barcelona",
     "home.meta.description":
-      "Amjad Pintura delivers premium painting and decoration services in Barcelona for homes, offices, and commercial spaces.",
-    "home.badge": "Premium Finishes · Barcelona, Spain",
-    "home.title": "Professional Painting & Decoration Services in Barcelona, Spain",
+      "Amjad Pintura handles residential, hotel, building, factory, and commercial painting projects in Barcelona with premium finishes and scalable crews.",
+    "home.badge": "Hotels, Buildings and Residential Painting - Barcelona",
+    "home.title":
+      "Professional paint solutions for hotels, factories, buildings, apartments, and commercial properties",
     "home.subtitle":
-      "Transforming homes, offices, and spaces with premium finishes, elegant color direction, and meticulous craftsmanship.",
+      "Amjad Pintura delivers exterior and interior painting, facade renewal, large project coordination, and skilled labor support for projects of every scale in Barcelona.",
     "home.ctaPrimary": "Get Free Quote",
-    "home.ctaSecondary": "View Projects",
-    "home.stat1.label": "Projects delivered",
-    "home.stat2.label": "Years in Barcelona",
-    "home.stat3.label": "Client satisfaction",
-    "home.heroAlt": "Painting work on buildings in Barcelona, Spain",
-    "home.service1.tag": "Interior",
-    "home.service1.title": "Refined living spaces",
-    "home.service1.body": "Luxury interior painting with crisp lines, smooth textures, and curated palettes.",
-    "home.service2.tag": "Exterior",
-    "home.service2.title": "Facade renewal",
-    "home.service2.body": "Durable exterior systems made for Barcelona sun, humidity, and urban wear.",
-    "home.service3.tag": "Commercial",
-    "home.service3.title": "Business-ready finishes",
+    "home.ctaSecondary": "View Project Gallery",
+    "home.stat1.label": "Projects completed",
+    "home.stat2.label": "Painters and support crew",
+    "home.stat3.label": "Flexible scheduling for active sites",
+    "home.service1.tag": "Hotels",
+    "home.service1.title": "Hospitality finishes that feel premium",
+    "home.service1.body":
+      "Guest rooms, corridors, lobbies, and exterior touch-ups delivered with clean planning and elegant finishes.",
+    "home.service2.tag": "Buildings",
+    "home.service2.title": "Facade painting for strong first impressions",
+    "home.service2.body":
+      "Exterior walls, apartment blocks, and high-visibility surfaces protected with durable weather-ready systems.",
+    "home.service3.tag": "Factories",
+    "home.service3.title": "Industrial painting with site discipline",
     "home.service3.body":
-      "Offices, boutiques, and hospitality spaces completed on schedule and with clean execution.",
-    "home.service4.tag": "Renovation",
-    "home.service4.title": "Preparation that lasts",
-    "home.service4.body": "Surface repairs, wall preparation, and detail-oriented finishing for long-term quality.",
-    "home.projects.tag": "Featured Projects",
-    "home.projects.title": "Recent transformations across Barcelona",
+      "Production-safe planning, steel and concrete coatings, and work sequences adapted to operational facilities.",
+    "home.service4.tag": "Residential",
+    "home.service4.title": "Homes, apartments, and rental upgrades",
+    "home.service4.body":
+      "Beautiful interior and exterior paintwork for villas, apartments, stairwells, terraces, and common areas.",
+    "home.projects.tag": "Project Gallery",
+    "home.projects.title": "Paint-focused hotels, buildings, factories, and residential exteriors",
     "home.projects.link": "See all projects",
-    "home.project1.title": "Eixample Apartment",
-    "home.project1.body": "Fresh neutral walls, warm trim, and a brighter open-plan living area.",
-    "home.project2.title": "Pedralbes Villa Exterior",
-    "home.project2.body": "Weather-resistant coatings and facade restoration for a premium residence.",
-    "home.project3.title": "Diagonal Office Refresh",
-    "home.project3.body": "Low-disruption repainting for a modern office with sharper brand alignment.",
-    "home.project4.title": "Minimalist Interior Upgrade",
-    "home.project4.body": "Soft textures and curated tonal contrasts for a contemporary feel.",
-    "home.projects.alt1": "Apartment painting project",
-    "home.projects.alt2": "Villa exterior paintwork",
-    "home.projects.alt3": "Office renovation with new paint",
-    "home.projects.alt4": "Modern interior painting",
-    "home.palette.tag": "Color Inspiration",
-    "home.palette.title": "Palette direction with a designer's eye",
+    "home.projects.helper":
+      "12 featured examples selected for scale, finish quality, and exterior impact.",
+    "home.project1.title": "City Hotel Facade Refresh",
+    "home.project1.body":
+      "A brighter facade program for a busy hospitality property with durable exterior coatings.",
+    "home.project2.title": "Residential Apartment Elevation",
+    "home.project2.body":
+      "Exterior walls, balconies, and trims renewed with clean warm-toned facade paint.",
+    "home.project3.title": "Modern Tower Exterior Detailing",
+    "home.project3.body":
+      "Premium exterior coatings applied for a clean, contemporary building presence.",
+    "home.project4.title": "Apartment Interior Repaint",
+    "home.project4.body":
+      "A polished repaint for a residential apartment with durable washable finishes.",
+    "home.project5.title": "Office Block Recoloring",
+    "home.project5.body":
+      "A sharper and more professional palette for a mixed-use office property.",
+    "home.project6.title": "Luxury Villa Exterior",
+    "home.project6.body":
+      "Exterior repainting with elegant off-whites, masonry prep, and crisp architectural lines.",
+    "home.project7.title": "Factory Exterior Coatings",
+    "home.project7.body":
+      "Industrial facade renewal and long-life coating systems for active facilities.",
+    "home.project8.title": "Residential Interior Upgrade",
+    "home.project8.body":
+      "Soft, premium wall color direction for a brighter and more elegant family home.",
+    "home.project9.title": "Boutique Hotel Entrance",
+    "home.project9.body":
+      "Fresh exterior paint and trim definition for a welcoming hotel street presence.",
+    "home.project10.title": "Apartment Block Facade Works",
+    "home.project10.body":
+      "External painting for common elevations and balconies with a durable maintenance plan.",
+    "home.project11.title": "Commercial Brand Repaint",
+    "home.project11.body":
+      "Interior and exterior color alignment for a commercial property upgrade.",
+    "home.project12.title": "High-Rise Residential Maintenance",
+    "home.project12.body":
+      "Coordinated painting support for a tall residential property with visible exterior wear.",
+    "home.projects.alt1": "Painted hotel exterior in Barcelona",
+    "home.projects.alt2": "Residential apartment facade repaint",
+    "home.projects.alt3": "Modern building exterior painting project",
+    "home.projects.alt4": "Painted kitchen and apartment renovation",
+    "home.projects.alt5": "Commercial office exterior color refresh",
+    "home.projects.alt6": "Luxury villa exterior painting",
+    "home.projects.alt7": "Industrial facility coating project",
+    "home.projects.alt8": "Residential interior premium painting",
+    "home.projects.alt9": "Hotel entry exterior repaint",
+    "home.projects.alt10": "Apartment building facade painting at sunset",
+    "home.projects.alt11": "Commercial property interior and brand color update",
+    "home.projects.alt12": "High-rise residential tower exterior maintenance painting",
+    "home.palette.tag": "Color Systems",
+    "home.palette.title":
+      "Expanded palettes for hotels, facades, interiors, and industrial spaces",
     "home.palette.body":
-      "We help clients balance light, warmth, and architectural character to create spaces that feel calm, fresh, and premium.",
-    "home.palette.1": "Soft Chalk",
-    "home.palette.2": "Warm Beige",
-    "home.palette.3": "Barcelona Blue",
-    "home.palette.4": "Deep Ocean",
-    "home.brands.tag": "Trusted Brands",
-    "home.brands.title": "Paint systems we work with",
-    "home.testimonials.tag": "Testimonials",
-    "home.testimonials.title": "Client feedback",
-    "home.testimonial1": "Amazing service! My apartment looks brand new.",
-    "home.testimonial2": "Professional and clean work. The finish quality exceeded expectations.",
-    "home.testimonial3": "They helped us choose the right tones and completed the office repaint on time.",
-    "home.cta.tag": "Ready to refresh your space?",
-    "home.cta.title": "Book your free quote in Barcelona today",
+      "From clean facade neutrals to warm hospitality tones and factory-grade coatings, we help clients choose colors that stay beautiful and practical.",
+    "home.palette.1": "Facade Ivory",
+    "home.palette.2": "Stone Beige",
+    "home.palette.3": "Warm Sand",
+    "home.palette.4": "Sky Concrete Blue",
+    "home.palette.5": "Harbor Blue",
+    "home.palette.6": "Urban Steel",
+    "home.palette.7": "Hotel Linen",
+    "home.palette.8": "Terracotta Warmth",
+    "home.palette.9": "Garden Sage",
+    "home.palette.10": "Architect Olive",
+    "home.palette.11": "Factory Mist",
+    "home.palette.12": "Deep Marine",
+    "home.scope.tag": "Project Scope",
+    "home.scope.title":
+      "We cover large projects, small projects, and outsourced labor support",
+    "home.scope.body":
+      "Whether you need one apartment painted, a hotel refreshed floor by floor, or extra painters for a contractor-led site, our team can scale around your timeline.",
+    "home.scope.large.tag": "Large Projects",
+    "home.scope.large.title": "Hotels, buildings, warehouses, and multi-unit sites",
+    "home.scope.large.body":
+      "We plan access, phasing, manpower, and finish systems for larger properties where deadlines and coordination matter.",
+    "home.scope.small.tag": "Small Projects",
+    "home.scope.small.title": "Apartments, rooms, kitchens, terraces, and touch-ups",
+    "home.scope.small.body":
+      "Fast, clean painting work for homeowners, tenants, property managers, and short-notice improvement jobs.",
+    "home.scope.labor.tag": "Labor Outsourcing",
+    "home.scope.labor.title": "Skilled painters and support labor when you need extra hands",
+    "home.scope.labor.body":
+      "Need reliable workers for your own site? We can provide experienced painting labor and support crew based on project demand.",
+    "home.testimonials.tag": "Client Opinions",
+    "home.testimonials.title": "Feedback from residential and commercial clients",
+    "home.testimonials.helper":
+      "12 reviews covering homes, hotels, business sites, and labor support projects.",
+    "home.testimonial1":
+      "They repainted our hotel entrance and corridor walls with excellent finish quality.",
+    "home.testimonial2":
+      "Professional team, clean execution, and very strong communication from start to finish.",
+    "home.testimonial3": "Our apartment block facade looks much brighter and more premium now.",
+    "home.testimonial4":
+      "They handled the exterior building repaint in phases without disturbing daily operations.",
+    "home.testimonial5":
+      "Excellent color guidance for our residential project. The finish feels modern and warm.",
+    "home.testimonial6":
+      "We needed extra painters for a contractor project and their labor team was reliable.",
+    "home.testimonial7":
+      "Factory walls and steel surfaces were coated on schedule with clear site discipline.",
+    "home.testimonial8":
+      "Our rental apartment was repainted fast and looked ready for the next tenant immediately.",
+    "home.testimonial9":
+      "The team worked weekends to help us finish a commercial handover on time.",
+    "home.testimonial10":
+      "Strong preparation work, clean masking, and no shortcuts. We would hire them again.",
+    "home.testimonial11":
+      "They updated our hotel rooms floor by floor and kept everything organized.",
+    "home.testimonial12":
+      "From quote to final paint coat, the whole experience felt professional and trustworthy.",
+    "home.contact.tag": "Direct Contact",
+    "home.contact.title": "Talk to us before you reach the footer",
+    "home.contact.body":
+      "Call, email, or send your project details now for hotels, buildings, apartments, factories, and labor support requests.",
+    "home.contact.cta": "Open Contact Form",
+    "home.cta.tag": "Ready to refresh your property or add more painters to your team?",
+    "home.cta.title":
+      "Talk to Amjad Pintura about hotels, residential sites, factories, or outsourced labor support",
     "home.cta.button": "Start Your Project",
     "services.meta.title": "Services | Amjad Pintura Barcelona",
     "services.meta.description":
@@ -96,7 +189,8 @@ const translations = {
     "services.s1.b3": "Color guidance for modern interiors",
     "services.s1.detail":
       "We prepare cracks, protect flooring and furniture, and build a smooth multi-coat finish that improves light and visual calm in everyday rooms.",
-    "services.s1.note": "Ideal for apartments, bedrooms, salons, hallways, and complete home refresh projects.",
+    "services.s1.note":
+      "Ideal for apartments, bedrooms, salons, hallways, and complete home refresh projects.",
     "services.s2.title": "Exterior Painting",
     "services.s2.body":
       "Facade painting systems designed to protect and elevate the exterior appearance of your property.",
@@ -105,7 +199,8 @@ const translations = {
     "services.s2.b3": "Balconies, railings, and exterior detailing",
     "services.s2.detail":
       "Our exterior work includes substrate inspection, sealing weak areas, and applying durable paint systems that hold color and resist sun, rain, and urban pollution.",
-    "services.s2.note": "Best suited for villas, facades, terraces, entrances, and full building frontage upgrades.",
+    "services.s2.note":
+      "Best suited for villas, facades, terraces, entrances, and full building frontage upgrades.",
     "services.s3.title": "Decorative Finishes",
     "services.s3.body":
       "Accent walls and high-end decorative treatments with subtle texture, depth, and character.",
@@ -114,7 +209,8 @@ const translations = {
     "services.s3.b3": "Bespoke decorative recommendations",
     "services.s3.detail":
       "Decorative work is developed sample-first, so clients can approve depth, texture, and sheen before the final wall system is installed.",
-    "services.s3.note": "Suitable for feature walls, reception spaces, luxury bedrooms, and design-led commercial interiors.",
+    "services.s3.note":
+      "Suitable for feature walls, reception spaces, luxury bedrooms, and design-led commercial interiors.",
     "services.s4.title": "Office & Commercial Painting",
     "services.s4.body":
       "Business-focused projects delivered with scheduling discipline and minimal disruption to operations.",
@@ -123,7 +219,8 @@ const translations = {
     "services.s4.b3": "Brand-aligned color and finish selection",
     "services.s4.detail":
       "Commercial paint jobs are planned around business operations, with phasing, protection, and clean daily closeout to reduce disruption for staff and clients.",
-    "services.s4.note": "A strong fit for offices, boutiques, clinics, restaurants, and property managers with tight timelines.",
+    "services.s4.note":
+      "A strong fit for offices, boutiques, clinics, restaurants, and property managers with tight timelines.",
     "services.s5.title": "Wall Repairs & Preparation",
     "services.s5.body":
       "The quality of a final finish depends on meticulous preparation, repair, and surface leveling.",
@@ -132,54 +229,62 @@ const translations = {
     "services.s5.b3": "Dust-managed preparation for cleaner projects",
     "services.s5.detail":
       "Preparation is where quality is won. We stabilize damaged surfaces, correct uneven textures, and prime properly so the final paint layer looks refined and lasts longer.",
-    "services.s5.note": "Recommended before any premium repaint, renovation handover, or decorative finish application.",
+    "services.s5.note":
+      "Recommended before any premium repaint, renovation handover, or decorative finish application.",
     "projects.meta.title": "Projects | Amjad Pintura Barcelona",
     "projects.meta.description":
       "Browse sample painting and decoration projects completed by Amjad Pintura across Barcelona.",
     "projects.tag": "Selected Work",
-    "projects.title": "Projects that combine finish quality, color balance, and clean execution",
+    "projects.title":
+      "Projects that combine finish quality, color balance, and clean execution",
     "projects.body":
       "A curated gallery of residential and commercial painting work inspired by the kinds of projects we deliver in Barcelona.",
-    "projects.p1.title": "Apartment Painting",
+    "projects.p1.title": "Interior Wall and Door Painting",
     "projects.p1.body":
-      "Brightening an urban apartment with warm whites, repaired walls, and sharper detailing.",
-    "projects.p2.title": "Villa Exterior",
+      "Clean brushwork around interior doors and edges for a sharper, more premium residential finish.",
+    "projects.p2.title": "Exterior Facade Coating",
     "projects.p2.body":
-      "Facade restoration and exterior repainting designed for elegance and weather protection.",
-    "projects.p3.title": "Office Renovation",
-    "projects.p3.body": "A clean, phased repaint for a contemporary workplace with minimal downtime.",
-    "projects.p4.title": "Modern Interior",
-    "projects.p4.body": "Soft contemporary tones that amplify natural light and architectural lines.",
-    "projects.p5.title": "Wall Repair & Finish",
-    "projects.p5.body": "Surface correction, smoothing, and precision finishing before the final color system.",
-    "projects.p6.title": "Decorative Feature Wall",
-    "projects.p6.body": "Premium decorative finish with layered tones for a subtle statement effect.",
-    "projects.alt1": "Apartment painting project",
-    "projects.alt2": "Villa exterior project",
-    "projects.alt3": "Office renovation project",
-    "projects.alt4": "Modern interior project",
-    "projects.alt5": "Wall preparation project",
-    "projects.alt6": "Decorative paint textures project",
+      "Exterior wall systems and facade coatings selected for weather resistance and a brighter building appearance.",
+    "projects.p3.title": "Industrial Floor Coatings",
+    "projects.p3.body":
+      "High-performance floor paint systems for industrial and commercial spaces that need durability and clean marking.",
+    "projects.p4.title": "Roller Finish on Interior Walls",
+    "projects.p4.body":
+      "Smooth roller application for interior walls with even texture, neat corners, and consistent color coverage.",
+    "projects.p5.title": "Preparation, Sanding, and Repair",
+    "projects.p5.body":
+      "Detailed prep work, surface correction, and sanding before the final paint system is applied.",
+    "projects.p6.title": "Brush and Roller Application",
+    "projects.p6.body":
+      "Close-up paint application work showing the kind of careful finishing used on walls, details, and edge areas.",
+    "projects.alt1": "Interior wall and door painting project",
+    "projects.alt2": "Exterior building and facade painting project",
+    "projects.alt3": "Industrial floor and coating project",
+    "projects.alt4": "Roller painting an interior wall",
+    "projects.alt5": "Detailed paint preparation and sanding work",
+    "projects.alt6": "Roller and brush paint application detail",
     "about.meta.title": "About | Amjad Pintura Barcelona",
     "about.meta.description":
       "Learn about Amjad Pintura, a premium painting and decoration company serving Barcelona with attention to detail.",
     "about.tag": "About Us",
-    "about.title": "A Barcelona painting company built around finish quality and trust",
+    "about.title":
+      "A Barcelona painting company built around finish quality and trust",
     "about.body1":
-      "Amjad Pintura was created to offer a more refined painting experience: careful planning, premium materials, detail-first execution, and spaces left clean at the end of every day.",
+      "Amjad Pintura was created to offer a more complete and reliable painting experience for clients who want more than a quick repaint. We believe good painting starts long before the first coat, with clear planning, honest communication, correct surface preparation, and a disciplined team that respects the property from the first day to the final handover. Our work is built around clean execution, durable systems, professional materials, and a finish standard that looks sharp in both residential and commercial spaces.",
     "about.body2":
-      "We work across apartments, villas, offices, and commercial interiors with a focus on durable finishes and elegant color direction that fits the architecture of each property.",
-    "about.alt": "Painter working on interior walls",
+      "We work across apartments, villas, stairwells, offices, shops, buildings, and commercial interiors, adapting every project to the condition of the surfaces and the practical needs of the client. Some projects need elegant interior repainting, some need exterior protection against weather and wear, and others need strong preparation, repair, sanding, and finishing to bring tired spaces back to life. We also support larger projects with organized crews, flexible scheduling, and a step-by-step approach that helps keep the work clean, efficient, and easy to manage. Our goal is always the same: balanced color, durable coverage, neat detail, and a result that feels professional the moment you walk into the space.",
+    "about.alt": "Professional painter working on an interior wall",
     "about.mission.tag": "Mission",
     "about.mission.title":
       "Delivering high-quality painting services in Barcelona with attention to detail",
     "about.mission.body":
-      "Every project is approached with the same standard: thoughtful preparation, premium finish systems, and communication that keeps the client informed from quote to completion.",
+      "Every project is approached with the same standard: careful inspection, thoughtful preparation, premium finish systems, and communication that keeps the client informed from quote to completion. We focus on punctual work, organized teams, clean protection, and practical solutions that fit the scale of the job, whether it is one room, a full apartment, an office refresh, or a larger building program. For us, quality is not only the final color on the wall, but the full process behind it: preparation, timing, workmanship, and the confidence the client feels when the job is complete.",
     "about.c1.title": "Experienced painters",
     "about.c1.body":
       "Skilled teams with strong preparation methods and consistent finishing standards.",
     "about.c2.title": "Premium materials",
-    "about.c2.body": "Professional paint systems selected for longevity, coverage, and visual depth.",
+    "about.c2.body":
+      "Professional paint systems selected for longevity, coverage, and visual depth.",
     "about.c3.title": "On-time delivery",
     "about.c3.body":
       "Realistic timelines and disciplined project coordination for residential and commercial work.",
@@ -197,13 +302,15 @@ const translations = {
     "contact.address.value": "Carrer de Mallorca 410, 08013 Barcelona, Spain",
     "contact.submit.successLocal":
       "Your request was captured in local mode. Configure SMTP variables to send real emails.",
-    "contact.submit.successSmtp": "Your request has been sent. We will contact you shortly.",
+    "contact.submit.successSmtp":
+      "Your request has been sent. We will contact you shortly.",
     "contact.submit.errorFields": "Please complete all contact form fields.",
-    "contact.submit.errorGeneric": "Unable to send your request right now. Please try again later.",
+    "contact.submit.errorGeneric":
+      "Unable to send your request right now. Please try again later.",
     "contact.mapTitle": "Map placeholder for Amjad Pintura"
   },
   es: {
-    "nav.tagline": "Barcelona · Pintura y Decoracion",
+    "nav.tagline": "Barcelona - Pintura y Decoracion",
     "nav.home": "Inicio",
     "nav.services": "Servicios",
     "nav.projects": "Proyectos",
@@ -214,10 +321,10 @@ const translations = {
     "nav.language": "Idioma",
     "nav.lang": "EN",
     "footer.description":
-      "Servicios premium de pintura y decoracion en Barcelona, con acabados cuidados para viviendas, oficinas y espacios comerciales.",
+      "Servicios premium de pintura y decoracion en Barcelona para hoteles, edificios, fabricas, apartamentos y espacios comerciales.",
     "footer.navigation": "Navegacion",
     "footer.contact": "Contacto",
-    "footer.hours": "Lun - Sab · 8:00 a 19:00",
+    "footer.hours": "Lun - Sab - 8:00 a 19:00",
     "footer.location": "Barcelona, Espana",
     "form.sending": "Enviando solicitud...",
     "form.name": "Nombre",
@@ -225,63 +332,160 @@ const translations = {
     "form.phone": "Telefono",
     "form.message": "Mensaje",
     "form.submit": "Enviar Solicitud",
-    "home.meta.title": "Amjad Pintura | Servicios Profesionales de Pintura y Decoracion en Barcelona, Espana",
+    "home.meta.title": "Amjad Pintura | Servicios de Pintura a Gran Escala en Barcelona",
     "home.meta.description":
-      "Amjad Pintura ofrece servicios premium de pintura y decoracion en Barcelona para viviendas, oficinas y espacios comerciales.",
-    "home.badge": "Acabados Premium · Barcelona, Espana",
-    "home.title": "Servicios Profesionales de Pintura y Decoracion en Barcelona, Espana",
+      "Amjad Pintura gestiona proyectos de pintura residencial, hotelera, industrial y comercial en Barcelona con acabados premium y equipos escalables.",
+    "home.badge": "Pintura para hoteles, edificios y residencias - Barcelona",
+    "home.title":
+      "Soluciones profesionales de pintura para hoteles, fabricas, edificios, apartamentos y propiedades comerciales",
     "home.subtitle":
-      "Transformamos viviendas, oficinas y espacios con acabados premium, direccion cromatica elegante y ejecucion meticulosa.",
+      "Amjad Pintura ofrece pintura interior y exterior, renovacion de fachadas, coordinacion de grandes proyectos y apoyo de mano de obra especializada para obras de cualquier escala en Barcelona.",
     "home.ctaPrimary": "Presupuesto Gratis",
-    "home.ctaSecondary": "Ver Proyectos",
-    "home.stat1.label": "Proyectos entregados",
-    "home.stat2.label": "Anos en Barcelona",
-    "home.stat3.label": "Satisfaccion del cliente",
-    "home.heroAlt": "Trabajos de pintura en edificios de Barcelona, Espana",
-    "home.service1.tag": "Interior",
-    "home.service1.title": "Espacios interiores refinados",
-    "home.service1.body": "Pintura interior de alta gama con lineas limpias, texturas suaves y paletas cuidadas.",
-    "home.service2.tag": "Exterior",
-    "home.service2.title": "Renovacion de fachadas",
-    "home.service2.body": "Sistemas exteriores duraderos preparados para el sol, la humedad y el desgaste urbano de Barcelona.",
-    "home.service3.tag": "Comercial",
-    "home.service3.title": "Acabados listos para negocio",
-    "home.service3.body": "Oficinas, boutiques y espacios hospitality ejecutados a tiempo y con obra limpia.",
-    "home.service4.tag": "Reforma",
-    "home.service4.title": "Preparacion que perdura",
-    "home.service4.body": "Reparacion de superficies, preparacion de paredes y acabados detallistas para una calidad duradera.",
-    "home.projects.tag": "Proyectos Destacados",
-    "home.projects.title": "Transformaciones recientes en Barcelona",
+    "home.ctaSecondary": "Ver Galeria",
+    "home.stat1.label": "Proyectos completados",
+    "home.stat2.label": "Pintores y personal de apoyo",
+    "home.stat3.label": "Horarios flexibles para obras activas",
+    "home.service1.tag": "Hoteles",
+    "home.service1.title": "Acabados hospitality con sensacion premium",
+    "home.service1.body":
+      "Habitaciones, pasillos, lobbies y retoques exteriores ejecutados con planificacion limpia y acabados elegantes.",
+    "home.service2.tag": "Edificios",
+    "home.service2.title": "Pintura de fachadas para una primera impresion fuerte",
+    "home.service2.body":
+      "Muros exteriores, bloques de apartamentos y superficies visibles protegidos con sistemas duraderos y resistentes al clima.",
+    "home.service3.tag": "Fabricas",
+    "home.service3.title": "Pintura industrial con disciplina de obra",
+    "home.service3.body":
+      "Planificacion segura para produccion, recubrimientos para acero y hormigon, y secuencias adaptadas a instalaciones operativas.",
+    "home.service4.tag": "Residencial",
+    "home.service4.title": "Viviendas, apartamentos y mejoras para alquiler",
+    "home.service4.body":
+      "Pintura interior y exterior de gran calidad para villas, apartamentos, escaleras, terrazas y zonas comunes.",
+    "home.projects.tag": "Galeria de Proyectos",
+    "home.projects.title":
+      "Hoteles, edificios, fabricas y exteriores residenciales centrados en pintura",
     "home.projects.link": "Ver todos los proyectos",
-    "home.project1.title": "Apartamento en Eixample",
-    "home.project1.body": "Paredes neutras renovadas, carpinteria calida y una zona de dia mas luminosa.",
-    "home.project2.title": "Exterior de villa en Pedralbes",
-    "home.project2.body": "Revestimientos resistentes al clima y restauracion de fachada para una residencia premium.",
-    "home.project3.title": "Renovacion de oficina en Diagonal",
-    "home.project3.body": "Repintado con baja interrupcion para una oficina moderna y mejor alineacion de marca.",
-    "home.project4.title": "Mejora interior minimalista",
-    "home.project4.body": "Texturas suaves y contrastes tonales cuidados para una sensacion contemporanea.",
-    "home.projects.alt1": "Proyecto de pintura de apartamento",
-    "home.projects.alt2": "Pintura exterior de villa",
-    "home.projects.alt3": "Renovacion de oficina con nueva pintura",
-    "home.projects.alt4": "Pintura interior moderna",
-    "home.palette.tag": "Inspiracion de Color",
-    "home.palette.title": "Direccion de paleta con mirada de disenador",
+    "home.projects.helper":
+      "12 ejemplos destacados seleccionados por escala, calidad de acabado e impacto exterior.",
+    "home.project1.title": "Renovacion de fachada de hotel urbano",
+    "home.project1.body":
+      "Un programa de fachada mas luminoso para una propiedad hotelera activa con revestimientos exteriores duraderos.",
+    "home.project2.title": "Elevacion de apartamento residencial",
+    "home.project2.body":
+      "Muros exteriores, balcones y molduras renovados con pintura de fachada en tonos calidos y limpios.",
+    "home.project3.title": "Detalle exterior de torre moderna",
+    "home.project3.body":
+      "Revestimientos exteriores premium aplicados para una presencia de edificio limpia y contemporanea.",
+    "home.project4.title": "Repintado interior de apartamento",
+    "home.project4.body":
+      "Un repintado cuidado para un apartamento residencial con acabados lavables y duraderos.",
+    "home.project5.title": "Recoloracion de bloque de oficinas",
+    "home.project5.body":
+      "Una paleta mas precisa y profesional para una propiedad de oficinas de uso mixto.",
+    "home.project6.title": "Exterior de villa de lujo",
+    "home.project6.body":
+      "Repintado exterior con blancos elegantes, preparacion de mamposteria y lineas arquitectonicas definidas.",
+    "home.project7.title": "Revestimientos exteriores de fabrica",
+    "home.project7.body":
+      "Renovacion de fachada industrial y sistemas de recubrimiento de larga duracion para instalaciones activas.",
+    "home.project8.title": "Mejora interior residencial",
+    "home.project8.body":
+      "Direccion de color suave y premium para una vivienda familiar mas luminosa y elegante.",
+    "home.project9.title": "Entrada de hotel boutique",
+    "home.project9.body":
+      "Pintura exterior fresca y definicion de molduras para una presencia hotelera mas atractiva.",
+    "home.project10.title": "Trabajos de fachada en bloque de apartamentos",
+    "home.project10.body":
+      "Pintura exterior para elevaciones comunes y balcones con un plan de mantenimiento duradero.",
+    "home.project11.title": "Repintado comercial de marca",
+    "home.project11.body":
+      "Alineacion cromatica interior y exterior para la mejora de una propiedad comercial.",
+    "home.project12.title": "Mantenimiento de residencial en altura",
+    "home.project12.body":
+      "Soporte coordinado de pintura para una propiedad residencial alta con desgaste exterior visible.",
+    "home.projects.alt1": "Exterior de hotel pintado en Barcelona",
+    "home.projects.alt2": "Repintado de fachada de apartamento residencial",
+    "home.projects.alt3": "Proyecto de pintura exterior de edificio moderno",
+    "home.projects.alt4": "Renovacion de apartamento y cocina pintada",
+    "home.projects.alt5": "Renovacion cromatica exterior de oficinas",
+    "home.projects.alt6": "Pintura exterior de villa de lujo",
+    "home.projects.alt7": "Proyecto de revestimiento industrial",
+    "home.projects.alt8": "Pintura interior residencial premium",
+    "home.projects.alt9": "Repintado exterior de entrada de hotel",
+    "home.projects.alt10": "Pintura de fachada de edificio al atardecer",
+    "home.projects.alt11": "Actualizacion interior y exterior de propiedad comercial",
+    "home.projects.alt12": "Mantenimiento exterior de torre residencial",
+    "home.palette.tag": "Sistemas de Color",
+    "home.palette.title":
+      "Paletas ampliadas para hoteles, fachadas, interiores y espacios industriales",
     "home.palette.body":
-      "Ayudamos a equilibrar luz, calidez y caracter arquitectonico para crear espacios serenos, frescos y premium.",
-    "home.palette.1": "Blanco Tiza",
-    "home.palette.2": "Beige Calido",
-    "home.palette.3": "Azul Barcelona",
-    "home.palette.4": "Oceano Profundo",
-    "home.brands.tag": "Marcas de Confianza",
-    "home.brands.title": "Sistemas de pintura con los que trabajamos",
-    "home.testimonials.tag": "Testimonios",
-    "home.testimonials.title": "Opiniones de clientes",
-    "home.testimonial1": "Servicio increible. Mi apartamento parece totalmente nuevo.",
-    "home.testimonial2": "Trabajo profesional y limpio. La calidad final supero las expectativas.",
-    "home.testimonial3": "Nos ayudaron a elegir los tonos adecuados y terminaron la oficina a tiempo.",
-    "home.cta.tag": "Listo para renovar tu espacio?",
-    "home.cta.title": "Reserva hoy tu presupuesto gratuito en Barcelona",
+      "Desde neutros limpios para fachadas hasta tonos calidos para hospitality y recubrimientos industriales, ayudamos a elegir colores bellos y practicos.",
+    "home.palette.1": "Marfil de Fachada",
+    "home.palette.2": "Beige Piedra",
+    "home.palette.3": "Arena Calida",
+    "home.palette.4": "Azul Hormigon Cielo",
+    "home.palette.5": "Azul Puerto",
+    "home.palette.6": "Acero Urbano",
+    "home.palette.7": "Lino Hotel",
+    "home.palette.8": "Terracota Calida",
+    "home.palette.9": "Salvia Jardin",
+    "home.palette.10": "Oliva Arquitectonica",
+    "home.palette.11": "Niebla Industrial",
+    "home.palette.12": "Marino Profundo",
+    "home.scope.tag": "Alcance del Proyecto",
+    "home.scope.title":
+      "Cubrimos grandes proyectos, pequenos proyectos y apoyo de mano de obra externalizada",
+    "home.scope.body":
+      "Tanto si necesitas pintar un apartamento, renovar un hotel por plantas o sumar pintores a una obra dirigida por un contratista, nuestro equipo se adapta a tus plazos.",
+    "home.scope.large.tag": "Grandes Proyectos",
+    "home.scope.large.title": "Hoteles, edificios, almacenes y propiedades multiunidad",
+    "home.scope.large.body":
+      "Planificamos accesos, fases, mano de obra y sistemas de acabado para propiedades grandes donde importan los plazos y la coordinacion.",
+    "home.scope.small.tag": "Pequenos Proyectos",
+    "home.scope.small.title": "Apartamentos, habitaciones, cocinas, terrazas y retoques",
+    "home.scope.small.body":
+      "Trabajos de pintura rapidos y limpios para propietarios, inquilinos, gestores y mejoras urgentes.",
+    "home.scope.labor.tag": "Externalizacion de Mano de Obra",
+    "home.scope.labor.title": "Pintores cualificados y personal de apoyo cuando necesitas mas manos",
+    "home.scope.labor.body":
+      "Si necesitas trabajadores fiables para tu propia obra, podemos aportar mano de obra de pintura y personal de apoyo segun la demanda del proyecto.",
+    "home.testimonials.tag": "Opiniones de Clientes",
+    "home.testimonials.title": "Comentarios de clientes residenciales y comerciales",
+    "home.testimonials.helper":
+      "12 opiniones de viviendas, hoteles, negocios y proyectos con apoyo de mano de obra.",
+    "home.testimonial1":
+      "Repintaron la entrada y los pasillos de nuestro hotel con una calidad de acabado excelente.",
+    "home.testimonial2":
+      "Equipo profesional, ejecucion limpia y una comunicacion muy fuerte de principio a fin.",
+    "home.testimonial3":
+      "La fachada de nuestro bloque de apartamentos se ve ahora mucho mas luminosa y premium.",
+    "home.testimonial4":
+      "Gestionaron el repintado exterior del edificio por fases sin afectar la operativa diaria.",
+    "home.testimonial5":
+      "Excelente orientacion de color para nuestro proyecto residencial. El acabado se siente moderno y calido.",
+    "home.testimonial6":
+      "Necesitabamos pintores extra para una obra de contratista y su equipo fue muy fiable.",
+    "home.testimonial7":
+      "Las paredes y superficies metalicas de la fabrica se recubrieron a tiempo y con disciplina.",
+    "home.testimonial8":
+      "Nuestro apartamento de alquiler se repinto rapido y quedo listo para el siguiente inquilino.",
+    "home.testimonial9":
+      "El equipo trabajo en fin de semana para ayudarnos a entregar un proyecto comercial a tiempo.",
+    "home.testimonial10":
+      "Muy buena preparacion, enmascarado limpio y sin atajos. Volveriamos a contratarlos.",
+    "home.testimonial11":
+      "Actualizaron nuestras habitaciones de hotel por plantas y mantuvieron todo organizado.",
+    "home.testimonial12":
+      "Desde el presupuesto hasta la ultima capa de pintura, toda la experiencia fue profesional y fiable.",
+    "home.contact.tag": "Contacto Directo",
+    "home.contact.title": "Habla con nosotros antes de llegar al footer",
+    "home.contact.body":
+      "Llama, envia un correo o comparte ahora los detalles de tu proyecto para hoteles, edificios, apartamentos, fabricas y apoyo de mano de obra.",
+    "home.contact.cta": "Abrir Formulario",
+    "home.cta.tag":
+      "Listo para renovar tu propiedad o sumar mas pintores a tu equipo?",
+    "home.cta.title":
+      "Habla con Amjad Pintura sobre hoteles, obras residenciales, fabricas o apoyo de mano de obra externalizada",
     "home.cta.button": "Empezar Proyecto",
     "services.meta.title": "Servicios | Amjad Pintura Barcelona",
     "services.meta.description":
@@ -291,29 +495,35 @@ const translations = {
     "services.banner.body":
       "Desde la preparacion detallada hasta la capa final, cada proyecto se planifica para ofrecer durabilidad, limpieza y un resultado premium.",
     "services.s1.title": "Pintura Interior",
-    "services.s1.body": "Acabados elegantes y duraderos para apartamentos, villas y viviendas familiares.",
+    "services.s1.body":
+      "Acabados elegantes y duraderos para apartamentos, villas y viviendas familiares.",
     "services.s1.b1": "Repintado completo de estancias y paredes de acento",
     "services.s1.b2": "Techos, molduras y puertas",
     "services.s1.b3": "Asesoria de color para interiores modernos",
     "services.s1.detail":
       "Preparamos grietas, protegemos suelos y mobiliario, y aplicamos un sistema de varias capas para lograr un acabado uniforme, luminoso y elegante.",
-    "services.s1.note": "Ideal para apartamentos, dormitorios, salones, pasillos y renovaciones completas de vivienda.",
+    "services.s1.note":
+      "Ideal para apartamentos, dormitorios, salones, pasillos y renovaciones completas de vivienda.",
     "services.s2.title": "Pintura Exterior",
-    "services.s2.body": "Sistemas para fachadas pensados para proteger y elevar la imagen exterior de tu propiedad.",
+    "services.s2.body":
+      "Sistemas para fachadas pensados para proteger y elevar la imagen exterior de tu propiedad.",
     "services.s2.b1": "Imprimaciones y revestimientos resistentes al clima",
     "services.s2.b2": "Mamposteria, estuco y renovacion de fachadas",
     "services.s2.b3": "Balcones, barandillas y detalles exteriores",
     "services.s2.detail":
       "Nuestro trabajo exterior incluye revision del soporte, sellado de zonas debilitadas y aplicacion de sistemas duraderos que resisten sol, lluvia y contaminacion urbana.",
-    "services.s2.note": "Perfecto para villas, fachadas, terrazas, accesos y mejoras completas del frente del edificio.",
+    "services.s2.note":
+      "Perfecto para villas, fachadas, terrazas, accesos y mejoras completas del frente del edificio.",
     "services.s3.title": "Acabados Decorativos",
-    "services.s3.body": "Paredes de acento y tratamientos decorativos de alta gama con textura, profundidad y caracter.",
+    "services.s3.body":
+      "Paredes de acento y tratamientos decorativos de alta gama con textura, profundidad y caracter.",
     "services.s3.b1": "Limewash, texturas y paredes de impacto",
     "services.s3.b2": "Estilismo tono sobre tono para interiores premium",
     "services.s3.b3": "Recomendaciones decorativas a medida",
     "services.s3.detail":
       "Los acabados decorativos se desarrollan con muestras previas para aprobar profundidad, textura y brillo antes de la aplicacion final.",
-    "services.s3.note": "Adecuado para paredes protagonistas, recepciones, dormitorios premium e interiores comerciales de diseno.",
+    "services.s3.note":
+      "Adecuado para paredes protagonistas, recepciones, dormitorios premium e interiores comerciales de diseno.",
     "services.s4.title": "Pintura de Oficinas y Comercios",
     "services.s4.body":
       "Proyectos enfocados en negocio, ejecutados con disciplina de plazos y minima interrupcion.",
@@ -322,7 +532,8 @@ const translations = {
     "services.s4.b3": "Seleccion de color y acabado alineada con marca",
     "services.s4.detail":
       "Los trabajos comerciales se planifican alrededor de la operativa del negocio, con fases, proteccion y cierre limpio diario para minimizar molestias.",
-    "services.s4.note": "Muy adecuado para oficinas, boutiques, clinicas, restaurantes y gestores de propiedades con plazos exigentes.",
+    "services.s4.note":
+      "Muy adecuado para oficinas, boutiques, clinicas, restaurantes y gestores de propiedades con plazos exigentes.",
     "services.s5.title": "Reparacion y Preparacion de Paredes",
     "services.s5.body":
       "La calidad del acabado final depende de una preparacion, reparacion y nivelado meticulosos.",
@@ -330,69 +541,86 @@ const translations = {
     "services.s5.b2": "Limpieza de superficies y sistemas de imprimacion",
     "services.s5.b3": "Preparacion con control de polvo para obras mas limpias",
     "services.s5.detail":
-      "La preparacion es donde se gana la calidad. Estabilizamos superficies dañadas, corregimos texturas irregulares y aplicamos imprimaciones correctas para un acabado duradero.",
-    "services.s5.note": "Recomendado antes de cualquier repintado premium, entrega de reforma o aplicacion de acabado decorativo.",
+      "La preparacion es donde se gana la calidad. Estabilizamos superficies danadas, corregimos texturas irregulares y aplicamos imprimaciones correctas para un acabado duradero.",
+    "services.s5.note":
+      "Recomendado antes de cualquier repintado premium, entrega de reforma o aplicacion de acabado decorativo.",
     "projects.meta.title": "Proyectos | Amjad Pintura Barcelona",
     "projects.meta.description":
       "Explora proyectos de pintura y decoracion de muestra realizados por Amjad Pintura en Barcelona.",
     "projects.tag": "Trabajos Seleccionados",
-    "projects.title": "Proyectos que unen calidad de acabado, equilibrio cromatico y ejecucion limpia",
+    "projects.title":
+      "Proyectos que unen calidad de acabado, equilibrio cromatico y ejecucion limpia",
     "projects.body":
       "Una galeria curada de trabajos residenciales y comerciales inspirada en el tipo de proyectos que realizamos en Barcelona.",
-    "projects.p1.title": "Pintura de Apartamento",
-    "projects.p1.body": "Revalorizacion de un piso urbano con blancos calidos, paredes reparadas y detalles mas definidos.",
-    "projects.p2.title": "Exterior de Villa",
-    "projects.p2.body": "Restauracion de fachada y repintado exterior pensados para elegancia y proteccion climatica.",
-    "projects.p3.title": "Renovacion de Oficina",
-    "projects.p3.body": "Repintado limpio y por fases para un espacio de trabajo contemporaneo con minima parada.",
-    "projects.p4.title": "Interior Moderno",
-    "projects.p4.body": "Tonos suaves contemporaneos que amplifican la luz natural y las lineas arquitectonicas.",
-    "projects.p5.title": "Reparacion y Acabado de Pared",
-    "projects.p5.body": "Correccion de superficie, alisado y acabado preciso antes del sistema final de color.",
-    "projects.p6.title": "Pared Decorativa",
-    "projects.p6.body": "Acabado decorativo premium con tonos en capas para un efecto elegante y sutil.",
-    "projects.alt1": "Proyecto de pintura de apartamento",
-    "projects.alt2": "Proyecto exterior de villa",
-    "projects.alt3": "Proyecto de renovacion de oficina",
-    "projects.alt4": "Proyecto de interior moderno",
-    "projects.alt5": "Proyecto de preparacion de pared",
-    "projects.alt6": "Proyecto de texturas decorativas",
+    "projects.p1.title": "Pintura Interior de Paredes y Puertas",
+    "projects.p1.body":
+      "Trabajo de brocha limpio alrededor de puertas interiores y bordes para un acabado residencial mas fino.",
+    "projects.p2.title": "Revestimiento de Fachada Exterior",
+    "projects.p2.body":
+      "Sistemas de pintura exterior y revestimientos de fachada pensados para resistir el clima y mejorar la imagen del edificio.",
+    "projects.p3.title": "Revestimientos para Suelos Industriales",
+    "projects.p3.body":
+      "Sistemas de pintura para suelos industriales y comerciales con alta resistencia y marcacion limpia.",
+    "projects.p4.title": "Acabado con Rodillo en Paredes Interiores",
+    "projects.p4.body":
+      "Aplicacion uniforme con rodillo para paredes interiores con textura regular, esquinas limpias y cobertura constante.",
+    "projects.p5.title": "Preparacion, Lijado y Reparacion",
+    "projects.p5.body":
+      "Trabajo detallado de preparacion, correccion de superficie y lijado antes de aplicar la pintura final.",
+    "projects.p6.title": "Aplicacion con Brocha y Rodillo",
+    "projects.p6.body":
+      "Detalle de aplicacion de pintura que muestra el tipo de acabado cuidadoso usado en paredes, bordes y zonas tecnicas.",
+    "projects.alt1": "Proyecto de pintura interior de paredes y puertas",
+    "projects.alt2": "Proyecto de pintura exterior de fachada",
+    "projects.alt3": "Proyecto de revestimiento de suelo industrial",
+    "projects.alt4": "Rodillo pintando una pared interior",
+    "projects.alt5": "Trabajo detallado de preparacion y lijado",
+    "projects.alt6": "Detalle de aplicacion con brocha y rodillo",
     "about.meta.title": "Nosotros | Amjad Pintura Barcelona",
     "about.meta.description":
       "Conoce Amjad Pintura, una empresa premium de pintura y decoracion en Barcelona con atencion al detalle.",
     "about.tag": "Nosotros",
-    "about.title": "Una empresa de pintura en Barcelona construida sobre calidad de acabado y confianza",
+    "about.title":
+      "Una empresa de pintura en Barcelona construida sobre calidad de acabado y confianza",
     "about.body1":
-      "Amjad Pintura nace para ofrecer una experiencia de pintura mas refinada: planificacion cuidadosa, materiales premium, ejecucion centrada en el detalle y espacios limpios al final de cada jornada.",
+      "Amjad Pintura nace para ofrecer una experiencia de pintura mas completa y fiable para clientes que buscan algo mas que un repintado rapido. Creemos que un buen trabajo empieza mucho antes de la primera capa, con planificacion clara, comunicacion honesta, preparacion correcta de las superficies y un equipo disciplinado que respeta la propiedad desde el primer dia hasta la entrega final. Nuestro trabajo se apoya en una ejecucion limpia, sistemas duraderos, materiales profesionales y un nivel de acabado que se vea serio tanto en espacios residenciales como comerciales.",
     "about.body2":
-      "Trabajamos en apartamentos, villas, oficinas e interiores comerciales con un enfoque en acabados duraderos y una direccion de color elegante que encaje con la arquitectura de cada propiedad.",
-    "about.alt": "Pintor trabajando en paredes interiores",
+      "Trabajamos en apartamentos, villas, escaleras, oficinas, tiendas, edificios e interiores comerciales, adaptando cada proyecto al estado de las superficies y a las necesidades practicas del cliente. Algunos proyectos necesitan un repintado interior elegante, otros necesitan proteccion exterior frente al clima y al desgaste, y otros requieren una preparacion fuerte, reparacion, lijado y acabado para devolver la vida a espacios cansados. Tambien apoyamos proyectos grandes con equipos organizados, horarios flexibles y una forma de trabajo por etapas que ayuda a mantener la obra limpia, eficiente y facil de gestionar. Nuestro objetivo siempre es el mismo: color equilibrado, cobertura duradera, detalle limpio y un resultado que se sienta profesional desde el primer momento.",
+    "about.alt": "Pintor profesional trabajando en una pared interior",
     "about.mission.tag": "Mision",
-    "about.mission.title": "Ofrecer servicios de pintura de alta calidad en Barcelona con atencion al detalle",
+    "about.mission.title":
+      "Ofrecer servicios de pintura de alta calidad en Barcelona con atencion al detalle",
     "about.mission.body":
-      "Cada proyecto se aborda con el mismo criterio: preparacion cuidada, sistemas de acabado premium y comunicacion clara desde el presupuesto hasta la entrega.",
+      "Cada proyecto se aborda con el mismo criterio: inspeccion cuidadosa, preparacion correcta, sistemas de acabado premium y comunicacion clara desde el presupuesto hasta la entrega. Nos enfocamos en tiempos realistas, equipos organizados, proteccion limpia y soluciones practicas que encajen con la escala del trabajo, ya sea una sola habitacion, un apartamento completo, una oficina o un programa de edificio mas amplio. Para nosotros, la calidad no es solo el color final sobre la pared, sino todo el proceso que lo hace posible: preparacion, tiempos, mano de obra y la tranquilidad que siente el cliente cuando el trabajo queda terminado.",
     "about.c1.title": "Pintores con experiencia",
-    "about.c1.body": "Equipos cualificados con metodos de preparacion solidos y estandares constantes de acabado.",
+    "about.c1.body":
+      "Equipos cualificados con metodos de preparacion solidos y estandares constantes de acabado.",
     "about.c2.title": "Materiales premium",
-    "about.c2.body": "Sistemas profesionales seleccionados por su durabilidad, cobertura y profundidad visual.",
+    "about.c2.body":
+      "Sistemas profesionales seleccionados por su durabilidad, cobertura y profundidad visual.",
     "about.c3.title": "Entrega puntual",
-    "about.c3.body": "Plazos realistas y coordinacion disciplinada para trabajos residenciales y comerciales.",
+    "about.c3.body":
+      "Plazos realistas y coordinacion disciplinada para trabajos residenciales y comerciales.",
     "about.c4.title": "Garantia de limpieza",
-    "about.c4.body": "Proteccion de superficies, zonas ordenadas y entrega final limpia.",
+    "about.c4.body":
+      "Proteccion de superficies, zonas ordenadas y entrega final limpia.",
     "contact.meta.title": "Contacto | Amjad Pintura Barcelona",
     "contact.meta.description":
       "Solicita un presupuesto gratuito de pintura con Amjad Pintura en Barcelona para proyectos residenciales y comerciales.",
     "contact.tag": "Contacto",
     "contact.title": "Solicita tu presupuesto gratuito de pintura en Barcelona",
     "contact.body":
-      "Cuéntanos tu proyecto y te responderemos con los siguientes pasos, tiempos estimados y una propuesta adaptada.",
+      "Cuentanos tu proyecto y te responderemos con los siguientes pasos, tiempos estimados y una propuesta adaptada.",
     "contact.address.label": "Direccion",
     "contact.address.value": "Carrer de Mallorca 410, 08013 Barcelona, Espana",
     "contact.submit.successLocal":
       "Tu solicitud se registro en modo local. Configura las variables SMTP para enviar correos reales.",
-    "contact.submit.successSmtp": "Tu solicitud ha sido enviada. Te contactaremos en breve.",
-    "contact.submit.errorFields": "Por favor completa todos los campos del formulario.",
-    "contact.submit.errorGeneric": "No se pudo enviar tu solicitud ahora mismo. Intentalo mas tarde.",
+    "contact.submit.successSmtp":
+      "Tu solicitud ha sido enviada. Te contactaremos en breve.",
+    "contact.submit.errorFields":
+      "Por favor completa todos los campos del formulario.",
+    "contact.submit.errorGeneric":
+      "No se pudo enviar tu solicitud ahora mismo. Intentalo mas tarde.",
     "contact.mapTitle": "Mapa de referencia para Amjad Pintura"
   }
 };
@@ -435,6 +663,37 @@ function buildLangToggle() {
   `;
 }
 
+function buildSocialLinks() {
+  return `
+    <a href="https://www.instagram.com" aria-label="Instagram" class="social-link">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect>
+        <circle cx="12" cy="12" r="4"></circle>
+        <circle cx="17.4" cy="6.6" r="0.9" fill="currentColor" stroke="none"></circle>
+      </svg>
+    </a>
+    <a href="https://www.facebook.com" aria-label="Facebook" class="social-link">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.6 1.6-1.6H16V4.8c-.2 0-.9-.1-1.9-.1-2.4 0-4 1.4-4 4.2V11H7.5v3H10V21h3.5Z"></path>
+      </svg>
+    </a>
+    <a href="https://www.google.com/maps" aria-label="Google" class="social-link">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M21.8 12.2c0-.7-.1-1.3-.2-1.9H12v3.6h5.5a4.7 4.7 0 0 1-2 3.1v2.6h3.2c1.9-1.7 3.1-4.3 3.1-7.4Z"></path>
+        <path d="M12 22c2.7 0 4.9-.9 6.5-2.4l-3.2-2.6c-.9.6-2 .9-3.3.9-2.5 0-4.7-1.7-5.5-4H3.2v2.7A10 10 0 0 0 12 22Z"></path>
+        <path d="M6.5 13.9a6 6 0 0 1 0-3.8V7.4H3.2a10 10 0 0 0 0 9.1l3.3-2.6Z"></path>
+        <path d="M12 6.1c1.4 0 2.7.5 3.7 1.4l2.8-2.8A10 10 0 0 0 3.2 7.4l3.3 2.7c.8-2.4 3-4 5.5-4Z"></path>
+      </svg>
+    </a>
+    <a href="https://wa.me/34600123456" aria-label="WhatsApp" class="social-link">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M20 11.8A8 8 0 0 0 6.4 6.1a7.8 7.8 0 0 0-2.3 5.6c0 1.4.4 2.8 1.1 4L4 20l4.4-1.2a8 8 0 0 0 3.6.9h0A8 8 0 0 0 20 11.8Zm-8 6.5h0a6.5 6.5 0 0 1-3.3-.9l-.2-.1-2.6.7.7-2.5-.2-.2a6.5 6.5 0 1 1 5.6 3Z"></path>
+        <path d="M15.7 13.5c-.2-.1-1.1-.5-1.2-.6-.2-.1-.3-.1-.5.1l-.3.4c-.1.2-.3.2-.5.1a5.3 5.3 0 0 1-1.6-1 5.9 5.9 0 0 1-1.1-1.4c-.1-.2 0-.3.1-.5l.2-.2.2-.3c.1-.1.1-.3 0-.4l-.5-1.2c-.1-.3-.3-.3-.4-.3h-.4c-.1 0-.4 0-.6.3s-.8.8-.8 1.8.8 2 1 2.3c.1.2 1.5 2.3 3.7 3.1.5.2.9.3 1.2.4.5.1 1 .1 1.4.1.4-.1 1.1-.4 1.2-.9.2-.5.2-.9.1-.9 0-.1-.2-.2-.4-.3Z"></path>
+      </svg>
+    </a>
+  `;
+}
+
 function injectLayout() {
   const page = document.body.dataset.page || "home";
   const navRoot = document.querySelector("[data-nav]");
@@ -444,37 +703,37 @@ function injectLayout() {
     navRoot.innerHTML = `
       <header class="site-header">
         <div class="site-header-inner">
-        <div class="flex items-center justify-between gap-4">
-          <a href="/" class="flex items-center gap-3">
-            <span class="flex h-11 w-11 items-center justify-center rounded-full bg-[#0E2A47] text-white shadow-lg shadow-slate-300/50">
-              <span class="font-display text-lg font-semibold">A</span>
-            </span>
-            <div>
-              <p class="font-display text-base font-semibold tracking-wide text-[#0E2A47]">Amjad Pintura</p>
-              <p class="text-xs uppercase tracking-[0.28em] text-slate-500" data-i18n="nav.tagline">${getTranslation("nav.tagline")}</p>
-            </div>
-          </a>
-          <button class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 text-[#0E2A47] md:hidden" data-menu-button aria-label="${getTranslation("nav.openMenu")}">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-          <div class="hidden items-center gap-4 md:flex">
-            ${buildNavLinks(page)}
-            ${buildLangToggle()}
-            <a href="/contact" class="btn-primary rounded-full bg-[#0E2A47] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-300/50" data-i18n="nav.quote">${getTranslation("nav.quote")}</a>
-          </div>
-        </div>
-        <div class="hidden pt-4 md:hidden" data-mobile-menu>
-          <div class="space-y-3 rounded-3xl border border-white/50 bg-white/85 p-4 shadow-xl">
-            ${buildNavLinks(page)}
-            <div class="flex items-center justify-between gap-3 px-2 pt-2">
-              <span class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500" data-i18n="nav.language">${getTranslation("nav.language")}</span>
+          <div class="flex items-center justify-between gap-4">
+            <a href="/" class="flex items-center gap-3">
+              <span class="flex h-11 w-11 items-center justify-center rounded-full bg-[#0E2A47] text-white shadow-lg shadow-slate-300/50">
+                <span class="font-display text-lg font-semibold">A</span>
+              </span>
+              <div>
+                <p class="font-display text-base font-semibold tracking-wide text-[#0E2A47]">Amjad Pintura</p>
+                <p class="text-xs uppercase tracking-[0.28em] text-slate-500" data-i18n="nav.tagline">${getTranslation("nav.tagline")}</p>
+              </div>
+            </a>
+            <button class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 text-[#0E2A47] md:hidden" data-menu-button aria-label="${getTranslation("nav.openMenu")}">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+            <div class="hidden items-center gap-4 md:flex">
+              ${buildNavLinks(page)}
               ${buildLangToggle()}
+              <a href="/contact" class="btn-primary rounded-full bg-[#0E2A47] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-300/50" data-i18n="nav.quote">${getTranslation("nav.quote")}</a>
             </div>
-            <a href="/contact" class="block rounded-2xl bg-[#0E2A47] px-4 py-3 text-center text-sm font-semibold text-white" data-i18n="nav.quote">${getTranslation("nav.quote")}</a>
           </div>
-        </div>
+          <div class="hidden pt-4 md:hidden" data-mobile-menu>
+            <div class="space-y-3 rounded-3xl border border-white/50 bg-white/85 p-4 shadow-xl">
+              ${buildNavLinks(page)}
+              <div class="flex items-center justify-between gap-3 px-2 pt-2">
+                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500" data-i18n="nav.language">${getTranslation("nav.language")}</span>
+                ${buildLangToggle()}
+              </div>
+              <a href="/contact" class="block rounded-2xl bg-[#0E2A47] px-4 py-3 text-center text-sm font-semibold text-white" data-i18n="nav.quote">${getTranslation("nav.quote")}</a>
+            </div>
+          </div>
         </div>
       </header>
     `;
@@ -488,9 +747,7 @@ function injectLayout() {
             <p class="font-display text-2xl font-semibold">Amjad Pintura</p>
             <p class="mt-4 max-w-md text-sm leading-7 text-slate-300" data-i18n="footer.description">${getTranslation("footer.description")}</p>
             <div class="mt-6 flex gap-3">
-              <a href="https://www.instagram.com" aria-label="Instagram" class="rounded-full border border-white/15 p-3 text-slate-200 hover:border-[#59A5FF] hover:text-[#59A5FF]">IG</a>
-              <a href="https://www.facebook.com" aria-label="Facebook" class="rounded-full border border-white/15 p-3 text-slate-200 hover:border-[#59A5FF] hover:text-[#59A5FF]">FB</a>
-              <a href="https://www.linkedin.com" aria-label="LinkedIn" class="rounded-full border border-white/15 p-3 text-slate-200 hover:border-[#59A5FF] hover:text-[#59A5FF]">IN</a>
+              ${buildSocialLinks()}
             </div>
           </div>
           <div class="footer-grid space-y-3 text-sm text-slate-300">
@@ -504,14 +761,14 @@ function injectLayout() {
           </div>
           <div class="space-y-3 text-sm text-slate-300">
             <p class="font-display text-lg font-semibold text-white" data-i18n="footer.contact">${getTranslation("footer.contact")}</p>
-            <p>example@amjadpintura.com</p>
+            <p>amjad@amjadpintura.com</p>
             <p>+34 600 123 456</p>
             <p data-i18n="contact.address.value">${getTranslation("contact.address.value")}</p>
             <p data-i18n="footer.hours">${getTranslation("footer.hours")}</p>
           </div>
         </div>
         <div class="border-t border-white/10 px-6 py-5 text-center text-xs tracking-[0.2em] text-slate-400">
-          <span id="year"></span> AMJAD PINTURA · <span data-i18n="footer.location">${getTranslation("footer.location")}</span>
+          <span id="year"></span> AMJAD PINTURA - <span data-i18n="footer.location">${getTranslation("footer.location")}</span>
         </div>
       </footer>
     `;
@@ -607,22 +864,6 @@ function setupReveal() {
   document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
 }
 
-function setupParallax() {
-  const parallaxItems = document.querySelectorAll("[data-parallax]");
-  if (!parallaxItems.length) return;
-
-  const updateParallax = () => {
-    const y = window.scrollY * 0.06;
-    parallaxItems.forEach((item, index) => {
-      const direction = index % 2 === 0 ? 1 : -1;
-      item.style.setProperty("--parallax-shift", `${direction * y}px`);
-    });
-  };
-
-  updateParallax();
-  window.addEventListener("scroll", updateParallax, { passive: true });
-}
-
 function normalizeContactStatus(message) {
   const map = {
     "Your request was captured in local mode. Configure SMTP variables to send real emails.":
@@ -669,13 +910,85 @@ function setupContactForm() {
   });
 }
 
+function setupSliders() {
+  document.querySelectorAll("[data-slider]").forEach((slider) => {
+    const track = slider.querySelector("[data-slider-track]");
+    const prevButton = slider.querySelector("[data-slider-prev]");
+    const nextButton = slider.querySelector("[data-slider-next]");
+    const dotsRoot = slider.querySelector("[data-slider-dots]");
+
+    if (!track || !prevButton || !nextButton || !dotsRoot) return;
+
+    const getCards = () => Array.from(track.children);
+    const getGroupSize = () => {
+      if (window.innerWidth < 768) return 1;
+      if (window.innerWidth < 1200) return 2;
+      return Number.parseInt(slider.dataset.sliderGroup || "1", 10);
+    };
+
+    const getStep = () => {
+      const firstCard = getCards()[0];
+      if (!firstCard) return track.clientWidth;
+      const style = window.getComputedStyle(track);
+      const gap = Number.parseFloat(style.columnGap || style.gap || "0");
+      return firstCard.getBoundingClientRect().width + gap;
+    };
+
+    const getPageWidth = () => getStep() * getGroupSize();
+
+    const getPageCount = () => Math.max(1, Math.ceil(getCards().length / getGroupSize()));
+
+    const buildDots = () => {
+      dotsRoot.innerHTML = "";
+      Array.from({ length: getPageCount() }).forEach((_, index) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "slider-dot";
+        dot.setAttribute("aria-label", `Go to slide group ${index + 1}`);
+        dot.addEventListener("click", () => {
+          track.scrollTo({ left: getPageWidth() * index, behavior: "smooth" });
+        });
+        dotsRoot.appendChild(dot);
+      });
+    };
+
+    const updateDots = () => {
+      const pageWidth = getPageWidth();
+      const active = Math.round(track.scrollLeft / pageWidth);
+      Array.from(dotsRoot.children).forEach((dot, index) => {
+        dot.classList.toggle("is-active", index === active);
+      });
+    };
+
+    prevButton.addEventListener("click", () => {
+      track.scrollBy({ left: -getPageWidth(), behavior: "smooth" });
+    });
+
+    nextButton.addEventListener("click", () => {
+      track.scrollBy({ left: getPageWidth(), behavior: "smooth" });
+    });
+
+    track.addEventListener("scroll", () => {
+      window.requestAnimationFrame(updateDots);
+    });
+
+    window.addEventListener("resize", () => {
+      buildDots();
+      updateDots();
+    });
+
+    buildDots();
+    updateDots();
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   injectLayout();
   setupMobileMenu();
   setupLanguage();
   setupReveal();
-  setupParallax();
   setupContactForm();
+  setupSliders();
 
   const yearNode = document.querySelector("#year");
   if (yearNode) {
