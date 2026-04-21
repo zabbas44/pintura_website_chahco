@@ -37,17 +37,44 @@
           </div>
         </section>
 
-        <section class="mx-auto mt-16 grid max-w-7xl gap-8 px-6 lg:px-8">
-          <article class="section-card reveal overflow-hidden rounded-[2rem]">
-            <div class="grid lg:grid-cols-[1.05fr_0.95fr]">
-              <div class="service-gallery bg-slate-50/70">
-                <div class="service-gallery-item"><img src="/pdf-gallery/page-23.jpg" alt="Painter applying paint to an interior wall" loading="lazy" /></div>
-                <div class="service-gallery-item"><img src="/pdf-gallery/page-25.jpg" alt="Worker painting a white interior wall" loading="lazy" /></div>
-                <div class="service-gallery-item"><img src="/pdf-gallery/page-02.jpg" alt="Brush painting detail near a door frame" loading="lazy" /></div>
-              </div>
-              <div class="p-8 lg:p-10">
-                <div class="mb-4 inline-flex rounded-full bg-[#E9F4FF] px-4 py-2 text-sm font-semibold text-[#0E2A47]" data-i18n="services.s1.title">Interior Painting</div>
-                <p class="text-sm leading-7 text-slate-600" data-i18n="services.s1.body">Calm, elegant, and durable wall finishes for apartments, villas, and family homes.</p>
+        <section class="mx-auto mt-16 max-w-7xl px-6 lg:px-8">
+          <div class="service-tabs reveal" data-service-tabs>
+            <div class="service-tabs-nav" role="tablist" aria-label="Painting service categories">
+              <button type="button" class="service-tab-button is-active" data-service-tab="interior" role="tab" aria-selected="true" data-i18n="services.s1.title">Interior Painting</button>
+              <button type="button" class="service-tab-button" data-service-tab="exterior" role="tab" aria-selected="false" data-i18n="services.s2.title">Exterior Painting</button>
+              <button type="button" class="service-tab-button" data-service-tab="decorative" role="tab" aria-selected="false" data-i18n="services.s3.title">Decorative Finishes</button>
+              <button type="button" class="service-tab-button" data-service-tab="commercial" role="tab" aria-selected="false" data-i18n="services.s4.title">Office & Commercial Painting</button>
+              <button type="button" class="service-tab-button" data-service-tab="repairs" role="tab" aria-selected="false" data-i18n="services.s5.title">Wall Repairs & Preparation</button>
+            </div>
+
+            <article class="section-card service-tab-panel is-active" data-service-panel="interior" role="tabpanel">
+              <div class="service-tab-layout">
+                <div class="service-slider" data-slider data-slider-single="true">
+                <div class="slider-track service-slider-track" data-slider-track>
+                  <figure class="service-slide slider-card">
+                    <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1400&q=85" alt="Painter rolling a smooth interior wall" loading="lazy" />
+                    <figcaption>Clean wall coverage</figcaption>
+                  </figure>
+                  <figure class="service-slide slider-card">
+                    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=85" alt="Finished modern painted living room" loading="lazy" />
+                    <figcaption>Premium interior finish</figcaption>
+                  </figure>
+                  <figure class="service-slide slider-card">
+                    <img src="/pdf-gallery/page-23.jpg" alt="Painter applying paint to an interior wall" loading="lazy" />
+                    <figcaption>Detailed site execution</figcaption>
+                  </figure>
+                </div>
+                <div class="service-slider-footer">
+                  <div class="slider-dots" data-slider-dots></div>
+                  <div class="slider-controls">
+                    <button type="button" class="slider-button" data-slider-prev aria-label="Previous interior painting image">Prev</button>
+                    <button type="button" class="slider-button" data-slider-next aria-label="Next interior painting image">Next</button>
+                  </div>
+                </div>
+                </div>
+                <div class="service-content-panel p-8 lg:p-10">
+                <h2 class="font-display text-4xl font-semibold text-[#0E2A47]" data-i18n="services.s1.title">Interior Painting</h2>
+                <p class="mt-4 text-base leading-8 text-slate-600" data-i18n="services.s1.body">Calm, elegant, and durable wall finishes for apartments, villas, and family homes.</p>
                 <ul class="mt-6 space-y-3 text-sm text-slate-600">
                   <li data-i18n="services.s1.b1">• Full room repaints and feature walls</li>
                   <li data-i18n="services.s1.b2">• Ceiling, trim, and door refinishing</li>
@@ -57,15 +84,38 @@
                   <p class="text-sm leading-7 text-slate-600" data-i18n="services.s1.detail">We prepare cracks, protect flooring and furniture, and build a smooth multi-coat finish that improves light and visual calm in everyday rooms.</p>
                   <p class="mt-4 text-sm font-medium leading-7 text-[#0E2A47]" data-i18n="services.s1.note">Ideal for apartments, bedrooms, salons, hallways, and complete home refresh projects.</p>
                 </div>
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
 
-          <article class="section-card reveal overflow-hidden rounded-[2rem]">
-            <div class="grid lg:grid-cols-[0.95fr_1.05fr]">
-              <div class="p-8 lg:order-1 lg:p-10">
-                <div class="mb-4 inline-flex rounded-full bg-[#FFF0E6] px-4 py-2 text-sm font-semibold text-[#0E2A47]" data-i18n="services.s2.title">Exterior Painting</div>
-                <p class="text-sm leading-7 text-slate-600" data-i18n="services.s2.body">Facade painting systems designed to protect and elevate the exterior appearance of your property.</p>
+            <article class="section-card service-tab-panel" data-service-panel="exterior" role="tabpanel" hidden>
+              <div class="service-tab-layout">
+                <div class="service-slider" data-slider data-slider-single="true">
+                <div class="slider-track service-slider-track" data-slider-track>
+                  <figure class="service-slide slider-card">
+                    <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1400&q=85" alt="Modern building exterior facade" loading="lazy" />
+                    <figcaption>Facade transformation</figcaption>
+                  </figure>
+                  <figure class="service-slide slider-card">
+                    <img src="/pdf-gallery/page-15.jpg" alt="Exterior facade painting project" loading="lazy" />
+                    <figcaption>Exterior paint systems</figcaption>
+                  </figure>
+                  <figure class="service-slide slider-card">
+                    <img src="/pdf-gallery/page-18.jpg" alt="Modern building exterior coating work" loading="lazy" />
+                    <figcaption>Durable outdoor coating</figcaption>
+                  </figure>
+                </div>
+                <div class="service-slider-footer">
+                  <div class="slider-dots" data-slider-dots></div>
+                  <div class="slider-controls">
+                    <button type="button" class="slider-button" data-slider-prev aria-label="Previous exterior painting image">Prev</button>
+                    <button type="button" class="slider-button" data-slider-next aria-label="Next exterior painting image">Next</button>
+                  </div>
+                </div>
+                </div>
+                <div class="service-content-panel p-8 lg:p-10">
+                <h2 class="font-display text-4xl font-semibold text-[#0E2A47]" data-i18n="services.s2.title">Exterior Painting</h2>
+                <p class="mt-4 text-base leading-8 text-slate-600" data-i18n="services.s2.body">Facade painting systems designed to protect and elevate the exterior appearance of your property.</p>
                 <ul class="mt-6 space-y-3 text-sm text-slate-600">
                   <li data-i18n="services.s2.b1">• Weather-resistant coatings and primers</li>
                   <li data-i18n="services.s2.b2">• Masonry, stucco, and facade renewal</li>
@@ -75,25 +125,38 @@
                   <p class="text-sm leading-7 text-slate-600" data-i18n="services.s2.detail">Our exterior work includes substrate inspection, sealing weak areas, and applying durable paint systems that hold color and resist sun, rain, and urban pollution.</p>
                   <p class="mt-4 text-sm font-medium leading-7 text-[#0E2A47]" data-i18n="services.s2.note">Best suited for villas, facades, terraces, entrances, and full building frontage upgrades.</p>
                 </div>
+                </div>
               </div>
-              <div class="service-gallery bg-slate-50/70 lg:order-2">
-                <div class="service-gallery-item"><img src="/pdf-gallery/page-15.jpg" alt="Exterior facade painting project" loading="lazy" /></div>
-                <div class="service-gallery-item"><img src="/pdf-gallery/page-17.jpg" alt="Apartment building facade maintenance" loading="lazy" /></div>
-                <div class="service-gallery-item"><img src="/pdf-gallery/page-18.jpg" alt="Modern building exterior coating work" loading="lazy" /></div>
-              </div>
-            </div>
-          </article>
+            </article>
 
-          <article class="section-card reveal overflow-hidden rounded-[2rem]">
-            <div class="grid lg:grid-cols-[1.05fr_0.95fr]">
-              <div class="service-gallery bg-slate-50/70">
-                <div class="service-gallery-item"><img src="/pdf-gallery/page-10.jpg" alt="Paint brush detail on a dark background" loading="lazy" /></div>
-                <div class="service-gallery-item"><img src="/pdf-gallery/page-34.jpg" alt="Roller applying paint on a bright surface" loading="lazy" /></div>
-                <div class="service-gallery-item"><img src="/pdf-gallery/page-24.jpg" alt="Hand finishing wall surface with painting tools" loading="lazy" /></div>
-              </div>
-              <div class="p-8 lg:p-10">
-                <div class="mb-4 inline-flex rounded-full bg-[#F7EFE8] px-4 py-2 text-sm font-semibold text-[#0E2A47]" data-i18n="services.s3.title">Decorative Finishes</div>
-                <p class="text-sm leading-7 text-slate-600" data-i18n="services.s3.body">Accent walls and high-end decorative treatments with subtle texture, depth, and character.</p>
+            <article class="section-card service-tab-panel" data-service-panel="decorative" role="tabpanel" hidden>
+              <div class="service-tab-layout">
+                <div class="service-slider" data-slider data-slider-single="true">
+                <div class="slider-track service-slider-track" data-slider-track>
+                  <figure class="service-slide slider-card">
+                    <img src="/pdf-gallery/page-03.jpg" alt="Paint color palette and decorative finish tools" loading="lazy" />
+                    <figcaption>Color and finish planning</figcaption>
+                  </figure>
+                  <figure class="service-slide slider-card">
+                    <img src="/pdf-gallery/page-05.jpg" alt="Decorative accent wall paint roller application" loading="lazy" />
+                    <figcaption>Accent wall application</figcaption>
+                  </figure>
+                  <figure class="service-slide slider-card">
+                    <img src="/pdf-gallery/page-30.jpg" alt="Premium decorative interior wall finish" loading="lazy" />
+                    <figcaption>Premium interior effect</figcaption>
+                  </figure>
+                </div>
+                <div class="service-slider-footer">
+                  <div class="slider-dots" data-slider-dots></div>
+                  <div class="slider-controls">
+                    <button type="button" class="slider-button" data-slider-prev aria-label="Previous decorative finish image">Prev</button>
+                    <button type="button" class="slider-button" data-slider-next aria-label="Next decorative finish image">Next</button>
+                  </div>
+                </div>
+                </div>
+                <div class="service-content-panel p-8 lg:p-10">
+                <h2 class="font-display text-4xl font-semibold text-[#0E2A47]" data-i18n="services.s3.title">Decorative Finishes</h2>
+                <p class="mt-4 text-base leading-8 text-slate-600" data-i18n="services.s3.body">Accent walls and high-end decorative treatments with subtle texture, depth, and character.</p>
                 <ul class="mt-6 space-y-3 text-sm text-slate-600">
                   <li data-i18n="services.s3.b1">• Limewash, textured, and statement wall finishes</li>
                   <li data-i18n="services.s3.b2">• Tone-on-tone styling for premium interiors</li>
@@ -103,15 +166,38 @@
                   <p class="text-sm leading-7 text-slate-600" data-i18n="services.s3.detail">Decorative work is developed sample-first, so clients can approve depth, texture, and sheen before the final wall system is installed.</p>
                   <p class="mt-4 text-sm font-medium leading-7 text-[#0E2A47]" data-i18n="services.s3.note">Suitable for feature walls, reception spaces, luxury bedrooms, and design-led commercial interiors.</p>
                 </div>
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
 
-          <article class="section-card reveal overflow-hidden rounded-[2rem]">
-            <div class="grid lg:grid-cols-[0.95fr_1.05fr]">
-              <div class="p-8 lg:order-1 lg:p-10">
-                <div class="mb-4 inline-flex rounded-full bg-[#E9F4FF] px-4 py-2 text-sm font-semibold text-[#0E2A47]" data-i18n="services.s4.title">Office & Commercial Painting</div>
-                <p class="text-sm leading-7 text-slate-600" data-i18n="services.s4.body">Business-focused projects delivered with scheduling discipline and minimal disruption to operations.</p>
+            <article class="section-card service-tab-panel" data-service-panel="commercial" role="tabpanel" hidden>
+              <div class="service-tab-layout">
+                <div class="service-slider" data-slider data-slider-single="true">
+                <div class="slider-track service-slider-track" data-slider-track>
+                  <figure class="service-slide slider-card">
+                    <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1400&q=85" alt="Modern commercial office interior" loading="lazy" />
+                    <figcaption>Office refresh</figcaption>
+                  </figure>
+                  <figure class="service-slide slider-card">
+                    <img src="/pdf-gallery/page-11.jpg" alt="Commercial floor and hall painting project" loading="lazy" />
+                    <figcaption>Commercial execution</figcaption>
+                  </figure>
+                  <figure class="service-slide slider-card">
+                    <img src="/pdf-gallery/page-38.jpg" alt="Parking or commercial floor coating work" loading="lazy" />
+                    <figcaption>Large area coatings</figcaption>
+                  </figure>
+                </div>
+                <div class="service-slider-footer">
+                  <div class="slider-dots" data-slider-dots></div>
+                  <div class="slider-controls">
+                    <button type="button" class="slider-button" data-slider-prev aria-label="Previous commercial painting image">Prev</button>
+                    <button type="button" class="slider-button" data-slider-next aria-label="Next commercial painting image">Next</button>
+                  </div>
+                </div>
+                </div>
+                <div class="service-content-panel p-8 lg:p-10">
+                <h2 class="font-display text-4xl font-semibold text-[#0E2A47]" data-i18n="services.s4.title">Office & Commercial Painting</h2>
+                <p class="mt-4 text-base leading-8 text-slate-600" data-i18n="services.s4.body">Business-focused projects delivered with scheduling discipline and minimal disruption to operations.</p>
                 <ul class="mt-6 space-y-3 text-sm text-slate-600">
                   <li data-i18n="services.s4.b1">• Offices, retail units, and hospitality spaces</li>
                   <li data-i18n="services.s4.b2">• Weekend or phased works when required</li>
@@ -121,25 +207,38 @@
                   <p class="text-sm leading-7 text-slate-600" data-i18n="services.s4.detail">Commercial paint jobs are planned around business operations, with phasing, protection, and clean daily closeout to reduce disruption for staff and clients.</p>
                   <p class="mt-4 text-sm font-medium leading-7 text-[#0E2A47]" data-i18n="services.s4.note">A strong fit for offices, boutiques, clinics, restaurants, and property managers with tight timelines.</p>
                 </div>
+                </div>
               </div>
-              <div class="service-gallery bg-slate-50/70 lg:order-2">
-                <div class="service-gallery-item"><img src="/pdf-gallery/page-11.jpg" alt="Commercial floor and hall painting project" loading="lazy" /></div>
-                <div class="service-gallery-item"><img src="/pdf-gallery/page-38.jpg" alt="Parking or commercial floor coating work" loading="lazy" /></div>
-                <div class="service-gallery-item"><img src="/pdf-gallery/page-39.jpg" alt="Industrial or sports floor paint finish" loading="lazy" /></div>
-              </div>
-            </div>
-          </article>
+            </article>
 
-          <article class="section-card reveal overflow-hidden rounded-[2rem]">
-            <div class="grid lg:grid-cols-[1.05fr_0.95fr]">
-              <div class="service-gallery bg-slate-50/70">
-                <div class="service-gallery-item"><img src="/pdf-gallery/page-24.jpg" alt="Wall repair and sanding detail" loading="lazy" /></div>
-                <div class="service-gallery-item"><img src="/pdf-gallery/page-40.jpg" alt="Worker preparing and coating a surface" loading="lazy" /></div>
-                <div class="service-gallery-item"><img src="/pdf-gallery/page-41.jpg" alt="Roller painting and surface preparation detail" loading="lazy" /></div>
-              </div>
-              <div class="p-8 lg:p-10">
-                <div class="mb-4 inline-flex rounded-full bg-[#FFF0E6] px-4 py-2 text-sm font-semibold text-[#0E2A47]" data-i18n="services.s5.title">Wall Repairs & Preparation</div>
-                <p class="text-sm leading-7 text-slate-600" data-i18n="services.s5.body">The quality of a final finish depends on meticulous preparation, repair, and surface leveling.</p>
+            <article class="section-card service-tab-panel" data-service-panel="repairs" role="tabpanel" hidden>
+              <div class="service-tab-layout">
+                <div class="service-slider" data-slider data-slider-single="true">
+                <div class="slider-track service-slider-track" data-slider-track>
+                  <figure class="service-slide slider-card">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=85" alt="Worker preparing a surface before paint" loading="lazy" />
+                    <figcaption>Surface preparation</figcaption>
+                  </figure>
+                  <figure class="service-slide slider-card">
+                    <img src="/pdf-gallery/page-24.jpg" alt="Wall repair and sanding detail" loading="lazy" />
+                    <figcaption>Repair detail</figcaption>
+                  </figure>
+                  <figure class="service-slide slider-card">
+                    <img src="/pdf-gallery/page-40.jpg" alt="Worker preparing and coating a surface" loading="lazy" />
+                    <figcaption>Ready for final coat</figcaption>
+                  </figure>
+                </div>
+                <div class="service-slider-footer">
+                  <div class="slider-dots" data-slider-dots></div>
+                  <div class="slider-controls">
+                    <button type="button" class="slider-button" data-slider-prev aria-label="Previous wall preparation image">Prev</button>
+                    <button type="button" class="slider-button" data-slider-next aria-label="Next wall preparation image">Next</button>
+                  </div>
+                </div>
+                </div>
+                <div class="service-content-panel p-8 lg:p-10">
+                <h2 class="font-display text-4xl font-semibold text-[#0E2A47]" data-i18n="services.s5.title">Wall Repairs & Preparation</h2>
+                <p class="mt-4 text-base leading-8 text-slate-600" data-i18n="services.s5.body">The quality of a final finish depends on meticulous preparation, repair, and surface leveling.</p>
                 <ul class="mt-6 space-y-3 text-sm text-slate-600">
                   <li data-i18n="services.s5.b1">• Crack filling, sanding, and smoothing</li>
                   <li data-i18n="services.s5.b2">• Surface cleaning and primer systems</li>
@@ -149,9 +248,10 @@
                   <p class="text-sm leading-7 text-slate-600" data-i18n="services.s5.detail">Preparation is where quality is won. We stabilize damaged surfaces, correct uneven textures, and prime properly so the final paint layer looks refined and lasts longer.</p>
                   <p class="mt-4 text-sm font-medium leading-7 text-[#0E2A47]" data-i18n="services.s5.note">Recommended before any premium repaint, renovation handover, or decorative finish application.</p>
                 </div>
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
+          </div>
         </section>
       </main>
       <div data-footer></div>

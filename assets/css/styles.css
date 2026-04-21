@@ -79,6 +79,35 @@ body::after {
   padding: 1rem 1.5rem;
 }
 
+.brand-logo {
+  display: block;
+  width: 9.5rem;
+  height: 4rem;
+  overflow: hidden;
+}
+
+.brand-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.footer-brand-logo {
+  display: block;
+  width: 13rem;
+  height: 5.2rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  background: #ffffff;
+}
+
+.footer-brand-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: scale(2.35);
+}
+
 .paint-splash {
   position: relative;
 }
@@ -157,6 +186,123 @@ body::after {
   transform: translateY(-8px);
   box-shadow: 0 26px 90px rgba(14, 42, 71, 0.14);
   border-color: rgba(89, 165, 255, 0.24);
+}
+
+.sector-card {
+  position: relative;
+  min-height: 25rem;
+  overflow: hidden;
+  border-radius: 2rem;
+  isolation: isolate;
+  background:
+    linear-gradient(180deg, rgba(8, 19, 34, 0.12), rgba(8, 19, 34, 0.82)),
+    var(--sector-image) center/cover no-repeat;
+  box-shadow: 0 26px 90px rgba(14, 42, 71, 0.18);
+}
+
+.sector-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 18% 18%, var(--sector-glow), transparent 28%),
+    linear-gradient(145deg, var(--sector-wash), transparent 45%);
+  mix-blend-mode: screen;
+  opacity: 0.95;
+}
+
+.sector-card::after {
+  content: "";
+  position: absolute;
+  inset: auto 1.25rem 1.25rem 1.25rem;
+  height: 0.32rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--sector-accent), rgba(255, 255, 255, 0.66));
+}
+
+.sector-card--hotels {
+  --sector-accent: #ff9a62;
+  --sector-glow: rgba(255, 154, 98, 0.48);
+  --sector-wash: rgba(201, 159, 121, 0.34);
+}
+
+.sector-card--buildings {
+  --sector-accent: #59a5ff;
+  --sector-glow: rgba(89, 165, 255, 0.52);
+  --sector-wash: rgba(38, 75, 112, 0.34);
+}
+
+.sector-card--factories {
+  --sector-accent: #ffd84d;
+  --sector-glow: rgba(255, 216, 77, 0.46);
+  --sector-wash: rgba(81, 102, 120, 0.36);
+}
+
+.sector-card--residential {
+  --sector-accent: #bcc8b4;
+  --sector-glow: rgba(188, 200, 180, 0.5);
+  --sector-wash: rgba(244, 229, 211, 0.34);
+}
+
+.sector-card-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.6rem;
+  color: #ffffff;
+}
+
+.sector-icon {
+  position: absolute;
+  top: 1.4rem;
+  right: 1.4rem;
+  display: inline-flex;
+  width: 3.25rem;
+  height: 3.25rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(12px);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.sector-kicker {
+  width: fit-content;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  padding: 0.5rem 0.78rem;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
+}
+
+.sector-title {
+  margin-top: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1.2;
+  min-height: 5.25rem;
+  text-wrap: balance;
+}
+
+.sector-body {
+  margin-top: 0.85rem;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.92rem;
+  line-height: 1.75;
+  min-height: 6.5rem;
 }
 
 .btn-primary {
@@ -317,6 +463,140 @@ body::after {
 .slider-dot.is-active {
   background: var(--accent);
   transform: scale(1.1);
+}
+
+.service-slider {
+  min-width: 0;
+  padding: 1.25rem;
+  background:
+    radial-gradient(circle at top left, rgba(89, 165, 255, 0.1), transparent 30%),
+    linear-gradient(180deg, rgba(248, 250, 252, 0.95), rgba(241, 245, 249, 0.72));
+}
+
+.service-card-stack {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.service-tabs {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.service-tabs-nav {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding: 0.4rem;
+  border: 1px solid rgba(14, 42, 71, 0.08);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 18px 54px rgba(14, 42, 71, 0.08);
+  backdrop-filter: blur(14px);
+  scrollbar-width: none;
+}
+
+.service-tabs-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.service-tab-button {
+  flex: 0 0 auto;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: #52677b;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.9rem 1.1rem;
+  transition: background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.service-tab-button:hover,
+.service-tab-button.is-active {
+  background: var(--ink);
+  color: #ffffff;
+  box-shadow: 0 12px 28px rgba(14, 42, 71, 0.18);
+  transform: translateY(-1px);
+}
+
+.service-tab-panel {
+  overflow: hidden;
+  border-radius: 2rem;
+}
+
+.service-tab-panel[hidden] {
+  display: none;
+}
+
+.service-tab-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(22rem, 0.88fr);
+  align-items: stretch;
+  min-height: 36rem;
+}
+
+.service-slider-track {
+  grid-auto-columns: 100%;
+  gap: 1rem;
+  padding-bottom: 0;
+}
+
+.service-slide {
+  position: relative;
+  height: 100%;
+  min-height: 34rem;
+  overflow: hidden;
+  border-radius: 1.75rem;
+  background: var(--ink);
+  box-shadow: 0 22px 64px rgba(14, 42, 71, 0.18);
+}
+
+.service-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.9s ease;
+}
+
+.service-slide:hover img {
+  transform: scale(1.04);
+}
+
+.service-slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 45%, rgba(8, 19, 34, 0.72));
+}
+
+.service-slide figcaption {
+  position: absolute;
+  z-index: 1;
+  left: 1.25rem;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.service-slider-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.service-content-panel {
+  max-width: 58rem;
+  align-self: center;
 }
 
 .review-avatar {
@@ -482,9 +762,42 @@ body::after {
     padding: 0.9rem 1rem;
   }
 
+  .brand-logo {
+    width: 8rem;
+    height: 3.4rem;
+  }
+
   .hero-full-bleed {
     min-height: 84vh;
     background-position: center;
+  }
+
+  .service-slider {
+    padding: 1rem;
+  }
+
+  .service-slide {
+    min-height: 20rem;
+    border-radius: 1.35rem;
+  }
+
+  .service-slider-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .service-tabs-nav {
+    border-radius: 1.5rem;
+  }
+
+  .service-tab-layout {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 0;
+  }
+
+  .sector-title,
+  .sector-body {
+    min-height: 0;
   }
 
   .page-hero {
