@@ -154,10 +154,19 @@ body::after {
 }
 
 .hero-stat-card {
+  display: block;
   background: rgba(255, 255, 255, 0.14);
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 24px 80px rgba(8, 19, 34, 0.2);
   backdrop-filter: blur(12px);
+  text-decoration: none;
+  transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
+
+.hero-stat-card:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.36);
 }
 
 .media-card {
@@ -768,8 +777,34 @@ body::after {
   }
 
   .hero-full-bleed {
-    min-height: 84vh;
+    min-height: 76vh;
     background-position: center;
+  }
+
+  .hero-overlay-content {
+    padding-top: 7.5rem !important;
+    padding-bottom: 3.5rem !important;
+  }
+
+  .hero-full-bleed h1 {
+    font-size: clamp(2rem, 9vw, 2.85rem) !important;
+    line-height: 1.08 !important;
+  }
+
+  .hero-full-bleed p[data-i18n="home.subtitle"] {
+    margin-top: 1rem;
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
+
+  .hero-full-bleed [data-i18n="home.badge"] {
+    margin-bottom: 1rem;
+    font-size: 0.66rem;
+    letter-spacing: 0.18em;
+  }
+
+  .hero-stat-card {
+    padding: 0.9rem;
   }
 
   .service-slider {
@@ -806,6 +841,16 @@ body::after {
 
   .page-hero-content {
     padding-block: 7rem 3rem;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(2rem, 8.5vw, 2.75rem) !important;
+    line-height: 1.12 !important;
+  }
+
+  .page-hero p:not(:first-child) {
+    font-size: 0.96rem;
+    line-height: 1.65;
   }
 
   .palette-grid {

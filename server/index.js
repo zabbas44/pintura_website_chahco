@@ -44,7 +44,7 @@ loadEnvFile();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const SITE_URL = process.env.SITE_URL || `http://localhost:${PORT}`;
+const SITE_URL = process.env.SITE_URL || "https://amjadpintura.com";
 
 const pageMap = {
   "/": "index.html",
@@ -155,11 +155,11 @@ app.get("/sitemap.xml", (_req, res) => {
   res.type("application/xml");
   res.send(`<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>${SITE_URL}/</loc></url>
-  <url><loc>${SITE_URL}/services</loc></url>
-  <url><loc>${SITE_URL}/projects</loc></url>
-  <url><loc>${SITE_URL}/about</loc></url>
-  <url><loc>${SITE_URL}/contact</loc></url>
+  <url><loc>${SITE_URL}/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>${SITE_URL}/services</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>${SITE_URL}/projects</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>${SITE_URL}/about</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>${SITE_URL}/contact</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>`);
 });
 

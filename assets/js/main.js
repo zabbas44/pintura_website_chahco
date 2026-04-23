@@ -716,6 +716,20 @@ function buildNavLinks(page) {
     .join("");
 }
 
+function buildMobileNavLinks(page) {
+  return navItems
+    .map(
+      (item) => `
+        <a href="${item.href}" class="block rounded-2xl border px-4 py-3 text-center text-sm font-semibold transition ${
+          item.key === page
+            ? "border-[#0E2A47] bg-[#0E2A47] text-white shadow-lg shadow-slate-300/50"
+            : "border-slate-200 bg-white text-[#0E2A47] hover:border-[#59A5FF] hover:text-[#59A5FF]"
+        }" data-i18n="${item.labelKey}">${getTranslation(item.labelKey)}</a>
+      `
+    )
+    .join("");
+}
+
 function buildLangToggle() {
   return `
     <button
@@ -749,7 +763,7 @@ function buildSocialLinks() {
         <path d="M12 6.1c1.4 0 2.7.5 3.7 1.4l2.8-2.8A10 10 0 0 0 3.2 7.4l3.3 2.7c.8-2.4 3-4 5.5-4Z"></path>
       </svg>
     </a>
-    <a href="https://wa.me/34600123456" aria-label="WhatsApp" class="social-link">
+    <a href="https://wa.me/34603829577" aria-label="WhatsApp" class="social-link">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
         <path d="M20 11.8A8 8 0 0 0 6.4 6.1a7.8 7.8 0 0 0-2.3 5.6c0 1.4.4 2.8 1.1 4L4 20l4.4-1.2a8 8 0 0 0 3.6.9h0A8 8 0 0 0 20 11.8Zm-8 6.5h0a6.5 6.5 0 0 1-3.3-.9l-.2-.1-2.6.7.7-2.5-.2-.2a6.5 6.5 0 1 1 5.6 3Z"></path>
         <path d="M15.7 13.5c-.2-.1-1.1-.5-1.2-.6-.2-.1-.3-.1-.5.1l-.3.4c-.1.2-.3.2-.5.1a5.3 5.3 0 0 1-1.6-1 5.9 5.9 0 0 1-1.1-1.4c-.1-.2 0-.3.1-.5l.2-.2.2-.3c.1-.1.1-.3 0-.4l-.5-1.2c-.1-.3-.3-.3-.4-.3h-.4c-.1 0-.4 0-.6.3s-.8.8-.8 1.8.8 2 1 2.3c.1.2 1.5 2.3 3.7 3.1.5.2.9.3 1.2.4.5.1 1 .1 1.4.1.4-.1 1.1-.4 1.2-.9.2-.5.2-.9.1-.9 0-.1-.2-.2-.4-.3Z"></path>
@@ -784,8 +798,8 @@ function injectLayout() {
           </div>
           <div class="hidden pt-4 md:hidden" data-mobile-menu>
             <div class="space-y-3 rounded-3xl border border-white/50 bg-white/85 p-4 shadow-xl">
-              ${buildNavLinks(page)}
-              <div class="flex items-center justify-between gap-3 px-2 pt-2">
+              ${buildMobileNavLinks(page)}
+              <div class="flex items-center justify-between gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-3">
                 <span class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500" data-i18n="nav.language">${getTranslation("nav.language")}</span>
                 ${buildLangToggle()}
               </div>
