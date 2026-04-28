@@ -51,7 +51,28 @@ const pageMap = {
   "/services": "services.html",
   "/projects": "projects.html",
   "/about": "about.html",
-  "/contact": "contact.html"
+  "/contact": "contact.html",
+  "/residential-painting-barcelona": "residential-painting-barcelona.html",
+  "/commercial-painting-barcelona": "commercial-painting-barcelona.html",
+  "/industrial-painting-spain": "industrial-painting-spain.html",
+  "/painting-labor-supply-barcelona": "painting-labor-supply-barcelona.html",
+  "/painters-terrassa": "painters-terrassa.html",
+  "/painters-sabadell": "painters-sabadell.html",
+  "/painters-badalona": "painters-badalona.html",
+  "/painters-hospitalet-de-llobregat": "painters-hospitalet-de-llobregat.html",
+  "/es": "es/index.html",
+  "/es/services": "es/services.html",
+  "/es/projects": "es/projects.html",
+  "/es/about": "es/about.html",
+  "/es/contact": "es/contact.html",
+  "/es/residential-painting-barcelona": "es/residential-painting-barcelona.html",
+  "/es/commercial-painting-barcelona": "es/commercial-painting-barcelona.html",
+  "/es/industrial-painting-spain": "es/industrial-painting-spain.html",
+  "/es/painting-labor-supply-barcelona": "es/painting-labor-supply-barcelona.html",
+  "/es/painters-terrassa": "es/painters-terrassa.html",
+  "/es/painters-sabadell": "es/painters-sabadell.html",
+  "/es/painters-badalona": "es/painters-badalona.html",
+  "/es/painters-hospitalet-de-llobregat": "es/painters-hospitalet-de-llobregat.html"
 };
 
 app.use(express.json());
@@ -153,13 +174,43 @@ app.post("/api/contact", async (req, res) => {
 
 app.get("/sitemap.xml", (_req, res) => {
   res.type("application/xml");
+  const urls = [
+    { path: "/", changefreq: "weekly", priority: "1.0" },
+    { path: "/services", changefreq: "weekly", priority: "0.9" },
+    { path: "/projects", changefreq: "weekly", priority: "0.8" },
+    { path: "/about", changefreq: "monthly", priority: "0.7" },
+    { path: "/contact", changefreq: "monthly", priority: "0.8" },
+    { path: "/residential-painting-barcelona", changefreq: "weekly", priority: "0.85" },
+    { path: "/commercial-painting-barcelona", changefreq: "weekly", priority: "0.85" },
+    { path: "/industrial-painting-spain", changefreq: "weekly", priority: "0.8" },
+    { path: "/painting-labor-supply-barcelona", changefreq: "weekly", priority: "0.85" },
+    { path: "/painters-terrassa", changefreq: "monthly", priority: "0.7" },
+    { path: "/painters-sabadell", changefreq: "monthly", priority: "0.7" },
+    { path: "/painters-badalona", changefreq: "monthly", priority: "0.7" },
+    { path: "/painters-hospitalet-de-llobregat", changefreq: "monthly", priority: "0.7" },
+    { path: "/es", changefreq: "weekly", priority: "0.9" },
+    { path: "/es/services", changefreq: "weekly", priority: "0.8" },
+    { path: "/es/projects", changefreq: "weekly", priority: "0.75" },
+    { path: "/es/about", changefreq: "monthly", priority: "0.6" },
+    { path: "/es/contact", changefreq: "monthly", priority: "0.75" },
+    { path: "/es/residential-painting-barcelona", changefreq: "weekly", priority: "0.8" },
+    { path: "/es/commercial-painting-barcelona", changefreq: "weekly", priority: "0.8" },
+    { path: "/es/industrial-painting-spain", changefreq: "weekly", priority: "0.75" },
+    { path: "/es/painting-labor-supply-barcelona", changefreq: "weekly", priority: "0.8" },
+    { path: "/es/painters-terrassa", changefreq: "monthly", priority: "0.65" },
+    { path: "/es/painters-sabadell", changefreq: "monthly", priority: "0.65" },
+    { path: "/es/painters-badalona", changefreq: "monthly", priority: "0.65" },
+    { path: "/es/painters-hospitalet-de-llobregat", changefreq: "monthly", priority: "0.65" }
+  ];
+
   res.send(`<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>${SITE_URL}/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>${SITE_URL}/services</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>${SITE_URL}/projects</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>${SITE_URL}/about</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>${SITE_URL}/contact</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+${urls
+  .map(
+    ({ path, changefreq, priority }) =>
+      `  <url><loc>${SITE_URL}${path}</loc><changefreq>${changefreq}</changefreq><priority>${priority}</priority></url>`
+  )
+  .join("\n")}
 </urlset>`);
 });
 

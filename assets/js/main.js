@@ -700,6 +700,25 @@ const navItems = [
 const defaultLang = "en";
 let currentLang = defaultLang;
 
+function isSpanishPath(pathname = window.location.pathname) {
+  return pathname === "/es" || pathname.startsWith("/es/");
+}
+
+function withLangPrefix(href, pathname = window.location.pathname) {
+  const prefix = isSpanishPath(pathname) ? "/es" : "";
+  if (href === "/") return prefix || "/";
+  return `${prefix}${href}`;
+}
+
+function getAlternateLanguagePath(pathname = window.location.pathname) {
+  if (isSpanishPath(pathname)) {
+    const stripped = pathname.replace(/^\/es(\/|$)/, "/");
+    return stripped === "" ? "/" : stripped;
+  }
+
+  return pathname === "/" ? "/es" : `/es${pathname}`;
+}
+
 function getTranslation(key, lang = currentLang) {
   return translations[lang]?.[key] ?? translations[defaultLang]?.[key] ?? key;
 }
@@ -708,7 +727,7 @@ function buildNavLinks(page) {
   return navItems
     .map(
       (item) => `
-        <a href="${item.href}" class="nav-link text-sm font-medium ${
+        <a href="${withLangPrefix(item.href)}" class="nav-link text-sm font-medium ${
           item.key === page ? "active-link" : "text-slate-600"
         }" data-i18n="${item.labelKey}">${getTranslation(item.labelKey)}</a>
       `
@@ -720,7 +739,7 @@ function buildMobileNavLinks(page) {
   return navItems
     .map(
       (item) => `
-        <a href="${item.href}" class="block rounded-2xl border px-4 py-3 text-center text-sm font-semibold transition ${
+        <a href="${withLangPrefix(item.href)}" class="block rounded-2xl border px-4 py-3 text-center text-sm font-semibold transition ${
           item.key === page
             ? "border-[#0E2A47] bg-[#0E2A47] text-white shadow-lg shadow-slate-300/50"
             : "border-slate-200 bg-white text-[#0E2A47] hover:border-[#59A5FF] hover:text-[#59A5FF]"
@@ -782,7 +801,7 @@ function injectLayout() {
       <header class="site-header">
         <div class="site-header-inner">
           <div class="flex items-center justify-between gap-4">
-            <a href="/" class="brand-logo" aria-label="Amjad Pintura home">
+            <a href="${withLangPrefix("/")}" class="brand-logo" aria-label="Amjad Pintura home">
               <img src="/assets/images/amjad-logo.png" alt="Amjad Pintura" />
             </a>
             <button class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 text-[#0E2A47] md:hidden" data-menu-button aria-label="${getTranslation("nav.openMenu")}">
@@ -793,7 +812,7 @@ function injectLayout() {
             <div class="hidden items-center gap-4 md:flex">
               ${buildNavLinks(page)}
               ${buildLangToggle()}
-              <a href="/contact" class="btn-primary rounded-full bg-[#0E2A47] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-300/50" data-i18n="nav.quote">${getTranslation("nav.quote")}</a>
+              <a href="${withLangPrefix("/contact")}" class="btn-primary rounded-full bg-[#0E2A47] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-300/50" data-i18n="nav.quote">${getTranslation("nav.quote")}</a>
             </div>
           </div>
           <div class="hidden pt-4 md:hidden" data-mobile-menu>
@@ -803,7 +822,7 @@ function injectLayout() {
                 <span class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500" data-i18n="nav.language">${getTranslation("nav.language")}</span>
                 ${buildLangToggle()}
               </div>
-              <a href="/contact" class="block rounded-2xl bg-[#0E2A47] px-4 py-3 text-center text-sm font-semibold text-white" data-i18n="nav.quote">${getTranslation("nav.quote")}</a>
+              <a href="${withLangPrefix("/contact")}" class="block rounded-2xl bg-[#0E2A47] px-4 py-3 text-center text-sm font-semibold text-white" data-i18n="nav.quote">${getTranslation("nav.quote")}</a>
             </div>
           </div>
         </div>
@@ -816,7 +835,7 @@ function injectLayout() {
       <footer class="mt-24 border-t border-white/60 bg-[#0B1C2D] text-white">
         <div class="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-[1.3fr_0.9fr_0.9fr] lg:px-8">
           <div>
-            <a href="/" class="footer-brand-logo" aria-label="Amjad Pintura home">
+            <a href="${withLangPrefix("/")}" class="footer-brand-logo" aria-label="Amjad Pintura home">
               <img src="/assets/images/amjad-logo-original.png" alt="Amjad Pintura" />
             </a>
             <p class="mt-4 max-w-md text-sm leading-7 text-slate-300" data-i18n="footer.description">${getTranslation("footer.description")}</p>
@@ -829,7 +848,7 @@ function injectLayout() {
             ${navItems
               .map(
                 (item) =>
-                  `<a href="${item.href}" class="block" data-i18n="${item.labelKey}">${getTranslation(item.labelKey)}</a>`
+                  `<a href="${withLangPrefix(item.href)}" class="block" data-i18n="${item.labelKey}">${getTranslation(item.labelKey)}</a>`
               )
               .join("")}
           </div>
@@ -899,12 +918,13 @@ function setLanguage(lang) {
 }
 
 function setupLanguage() {
-  const savedLang = localStorage.getItem("amjadpintura.lang");
-  currentLang = savedLang === "es" ? "es" : "en";
+  currentLang = isSpanishPath() ? "es" : "en";
 
   document.querySelectorAll("[data-lang-toggle]").forEach((button) => {
     button.addEventListener("click", () => {
-      setLanguage(currentLang === "en" ? "es" : "en");
+      const nextPath = getAlternateLanguagePath();
+      localStorage.setItem("amjadpintura.lang", isSpanishPath() ? "en" : "es");
+      window.location.assign(nextPath);
     });
   });
 
