@@ -697,6 +697,10 @@ const navItems = [
   { href: "/contact", key: "contact", labelKey: "nav.contact" }
 ];
 
+const CONTACT_PHONE = "+34603829577";
+const CONTACT_PHONE_INTL = "34603829577";
+const CONTACT_EMAIL = "amjad@amjadpintura.com";
+
 const defaultLang = "en";
 let currentLang = defaultLang;
 
@@ -749,6 +753,108 @@ function buildMobileNavLinks(page) {
     .join("");
 }
 
+function buildWhatsAppHref(pathname = window.location.pathname) {
+  const message = isSpanishPath(pathname)
+    ? `Hola Amjad Pintura, me gustaria pedir un presupuesto. Pagina: ${window.location.href}`
+    : `Hello Amjad Pintura, I'd like a free quote. Page: ${window.location.href}`;
+  return `https://wa.me/${CONTACT_PHONE_INTL}?text=${encodeURIComponent(message)}`;
+}
+
+function buildMailtoHref(pathname = window.location.pathname) {
+  const subject = isSpanishPath(pathname)
+    ? "Solicitud de presupuesto - Amjad Pintura"
+    : "Free Quote Request - Amjad Pintura";
+  const body = isSpanishPath(pathname)
+    ? "Hola Amjad Pintura,%0D%0A%0D%0AQuiero solicitar un presupuesto.%0D%0A%0D%0ANombre:%0D%0ATelefono:%0D%0ADireccion/Zona:%0D%0ADetalles del proyecto:%0D%0A%0D%0AGracias."
+    : "Hello Amjad Pintura,%0D%0A%0D%0AI would like to request a free quote.%0D%0A%0D%0AName:%0D%0APhone:%0D%0ALocation:%0D%0AProject details:%0D%0A%0D%0AThank you.";
+  return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${body}`;
+}
+
+function buildContactStrip() {
+  const whatsappHref = buildWhatsAppHref();
+  const mailtoHref = buildMailtoHref();
+
+  return `
+    <div class="top-contact-strip">
+      <div class="top-contact-inner">
+        <a class="top-contact-pill" href="${mailtoHref}" aria-label="Email Amjad Pintura">
+          <span class="top-contact-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 7.5 12 13l9-5.5" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 6h15A1.5 1.5 0 0 1 21 7.5v9A1.5 1.5 0 0 1 19.5 18h-15A1.5 1.5 0 0 1 3 16.5v-9A1.5 1.5 0 0 1 4.5 6Z" />
+            </svg>
+          </span>
+          <span class="top-contact-text">${CONTACT_EMAIL}</span>
+        </a>
+
+        <div class="top-contact-pill" aria-label="Call or WhatsApp">
+          <a class="top-contact-icon-link" href="${whatsappHref}" aria-label="WhatsApp ${CONTACT_PHONE}">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20 11.8A8 8 0 0 0 6.4 6.1a7.8 7.8 0 0 0-2.3 5.6c0 1.4.4 2.8 1.1 4L4 20l4.4-1.2a8 8 0 0 0 3.6.9h0A8 8 0 0 0 20 11.8Zm-8 6.5h0a6.5 6.5 0 0 1-3.3-.9l-.2-.1-2.6.7.7-2.5-.2-.2a6.5 6.5 0 1 1 5.6 3Z"></path>
+              <path d="M15.7 13.5c-.2-.1-1.1-.5-1.2-.6-.2-.1-.3-.1-.5.1l-.3.4c-.1.2-.3.2-.5.1a5.3 5.3 0 0 1-1.6-1 5.9 5.9 0 0 1-1.1-1.4c-.1-.2 0-.3.1-.5l.2-.2.2-.3c.1-.1.1-.3 0-.4l-.5-1.2c-.1-.3-.3-.3-.4-.3h-.4c-.1 0-.4 0-.6.3s-.8.8-.8 1.8.8 2 1 2.3c.1.2 1.5 2.3 3.7 3.1.5.2.9.3 1.2.4.5.1 1 .1 1.4.1.4-.1 1.1-.4 1.2-.9.2-.5.2-.9.1-.9 0-.1-.2-.2-.4-.3Z"></path>
+            </svg>
+          </a>
+          <a class="top-contact-icon-link" href="tel:${CONTACT_PHONE}" aria-label="Call ${CONTACT_PHONE}">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 4.5h2.1c.33 0 .63.22.72.54l.96 3.35a.75.75 0 0 1-.19.74l-1.3 1.3a15.74 15.74 0 0 0 4.53 4.53l1.3-1.3a.75.75 0 0 1 .74-.19l3.35.96c.32.09.54.39.54.72v2.1c0 .41-.33.75-.75.75h-.75C10.73 18.75 5.25 13.27 5.25 6v-.75c0-.42.34-.75.75-.75Z" />
+            </svg>
+          </a>
+          <a class="top-contact-number" href="${whatsappHref}" aria-label="Chat on WhatsApp ${CONTACT_PHONE}">${CONTACT_PHONE}</a>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function buildQuickQuoteSection() {
+  return `
+    <section class="quick-quote-shell">
+      <div class="mx-auto max-w-7xl px-6 py-14 lg:px-8">
+        <div class="quick-quote-card section-card rounded-[2.5rem] p-8 lg:flex lg:items-start lg:justify-between lg:gap-10 lg:p-10">
+          <div class="max-w-xl">
+            <p class="text-sm font-semibold uppercase tracking-[0.28em] text-[#59A5FF]">${isSpanishPath() ? "Solicitud rapida" : "Quick Quote"}</p>
+            <h2 class="font-display mt-3 text-4xl font-semibold text-[#0E2A47]">${isSpanishPath() ? "Cuéntanos tu proyecto" : "Tell Us About Your Project"}</h2>
+            <p class="mt-4 text-sm leading-7 text-slate-600">
+              ${
+                isSpanishPath()
+                  ? "Completa este formulario y te responderemos con siguientes pasos y una estimación."
+                  : "Send the details and we’ll reply with next steps and a tailored estimate."
+              }
+            </p>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a class="slider-button" href="${buildWhatsAppHref()}">WhatsApp</a>
+              <a class="slider-button" href="${buildMailtoHref()}">Email</a>
+            </div>
+          </div>
+
+          <form class="mt-8 space-y-4 lg:mt-0 lg:w-[30rem]" data-contact-form>
+            <div>
+              <label class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500" for="qq-name" data-i18n="form.name">${getTranslation("form.name")}</label>
+              <input id="qq-name" name="name" type="text" required class="mt-2 w-full rounded-2xl border border-slate-200 bg-white/80 px-4 py-3 text-sm text-[#0E2A47] outline-none focus:border-[#59A5FF]" data-i18n-placeholder="form.name" placeholder="${getTranslation("form.name")}" />
+            </div>
+            <div>
+              <label class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500" for="qq-email" data-i18n="form.email">${getTranslation("form.email")}</label>
+              <input id="qq-email" name="email" type="email" required class="mt-2 w-full rounded-2xl border border-slate-200 bg-white/80 px-4 py-3 text-sm text-[#0E2A47] outline-none focus:border-[#59A5FF]" data-i18n-placeholder="form.email" placeholder="${getTranslation("form.email")}" />
+            </div>
+            <div>
+              <label class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500" for="qq-phone" data-i18n="form.phone">${getTranslation("form.phone")}</label>
+              <input id="qq-phone" name="phone" type="tel" required class="mt-2 w-full rounded-2xl border border-slate-200 bg-white/80 px-4 py-3 text-sm text-[#0E2A47] outline-none focus:border-[#59A5FF]" data-i18n-placeholder="form.phone" placeholder="${getTranslation("form.phone")}" />
+            </div>
+            <div>
+              <label class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500" for="qq-message" data-i18n="form.message">${getTranslation("form.message")}</label>
+              <textarea id="qq-message" name="message" required class="mt-2 min-h-[8.5rem] w-full rounded-2xl border border-slate-200 bg-white/80 px-4 py-3 text-sm text-[#0E2A47] outline-none focus:border-[#59A5FF]" data-i18n-placeholder="form.message" placeholder="${getTranslation("form.message")}"></textarea>
+            </div>
+            <div class="pt-1">
+              <button type="submit" class="btn-primary w-full rounded-full bg-[#0E2A47] px-7 py-4 text-sm font-semibold text-white shadow-xl shadow-slate-300/50" data-i18n="form.submit">${getTranslation("form.submit")}</button>
+            </div>
+            <p class="text-xs leading-6 text-slate-500" data-form-status></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  `;
+}
+
 function buildLangToggle() {
   return `
     <button
@@ -799,6 +905,7 @@ function injectLayout() {
   if (navRoot) {
     navRoot.innerHTML = `
       <header class="site-header">
+        ${buildContactStrip()}
         <div class="site-header-inner">
           <div class="flex items-center justify-between gap-4">
             <a href="${withLangPrefix("/")}" class="brand-logo" aria-label="Amjad Pintura home">
@@ -832,7 +939,8 @@ function injectLayout() {
 
   if (footerRoot) {
     footerRoot.innerHTML = `
-      <footer class="mt-24 border-t border-white/60 bg-[#0B1C2D] text-white">
+      ${buildQuickQuoteSection()}
+      <footer class="border-t border-white/60 bg-[#0B1C2D] text-white">
         <div class="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-[1.3fr_0.9fr_0.9fr] lg:px-8">
           <div>
             <a href="${withLangPrefix("/")}" class="footer-brand-logo" aria-label="Amjad Pintura home">
@@ -854,8 +962,26 @@ function injectLayout() {
           </div>
           <div class="space-y-3 text-sm text-slate-300">
             <p class="font-display text-lg font-semibold text-white" data-i18n="footer.contact">${getTranslation("footer.contact")}</p>
-            <p>amjad@amjadpintura.com</p>
-            <p><a href="tel:+34603829577" class="transition hover:text-[#59A5FF]">+34603829577</a></p>
+            <p><a href="${buildMailtoHref()}" class="transition hover:text-[#59A5FF]">${CONTACT_EMAIL}</a></p>
+            <p class="flex flex-wrap items-center gap-2">
+              <a href="${buildWhatsAppHref()}" class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold tracking-[0.16em] text-slate-200 transition hover:border-white/25 hover:text-white" aria-label="WhatsApp ${CONTACT_PHONE}">
+                <span class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-white/10" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20 11.8A8 8 0 0 0 6.4 6.1a7.8 7.8 0 0 0-2.3 5.6c0 1.4.4 2.8 1.1 4L4 20l4.4-1.2a8 8 0 0 0 3.6.9h0A8 8 0 0 0 20 11.8Zm-8 6.5h0a6.5 6.5 0 0 1-3.3-.9l-.2-.1-2.6.7.7-2.5-.2-.2a6.5 6.5 0 1 1 5.6 3Z"></path>
+                    <path d="M15.7 13.5c-.2-.1-1.1-.5-1.2-.6-.2-.1-.3-.1-.5.1l-.3.4c-.1.2-.3.2-.5.1a5.3 5.3 0 0 1-1.6-1 5.9 5.9 0 0 1-1.1-1.4c-.1-.2 0-.3.1-.5l.2-.2.2-.3c.1-.1.1-.3 0-.4l-.5-1.2c-.1-.3-.3-.3-.4-.3h-.4c-.1 0-.4 0-.6.3s-.8.8-.8 1.8.8 2 1 2.3c.1.2 1.5 2.3 3.7 3.1.5.2.9.3 1.2.4.5.1 1 .1 1.4.1.4-.1 1.1-.4 1.2-.9.2-.5.2-.9.1-.9 0-.1-.2-.2-.4-.3Z"></path>
+                  </svg>
+                </span>
+                WhatsApp
+              </a>
+              <a href="tel:${CONTACT_PHONE}" class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold tracking-[0.16em] text-slate-200 transition hover:border-white/25 hover:text-white" aria-label="Call ${CONTACT_PHONE}">
+                <span class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-white/10" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 4.5h2.1c.33 0 .63.22.72.54l.96 3.35a.75.75 0 0 1-.19.74l-1.3 1.3a15.74 15.74 0 0 0 4.53 4.53l1.3-1.3a.75.75 0 0 1 .74-.19l3.35.96c.32.09.54.39.54.72v2.1c0 .41-.33.75-.75.75h-.75C10.73 18.75 5.25 13.27 5.25 6v-.75c0-.42.34-.75.75-.75Z" />
+                  </svg>
+                </span>
+                ${CONTACT_PHONE}
+              </a>
+            </p>
             <p data-i18n="contact.address.value">${getTranslation("contact.address.value")}</p>
             <p data-i18n="footer.hours">${getTranslation("footer.hours")}</p>
           </div>
@@ -971,36 +1097,36 @@ function normalizeContactStatus(message) {
 }
 
 function setupContactForm() {
-  const form = document.querySelector("[data-contact-form]");
-  if (!form) return;
+  document.querySelectorAll("[data-contact-form]").forEach((form) => {
+    const status = form.querySelector("[data-form-status]") || form.parentElement?.querySelector("[data-form-status]");
+    if (!status) return;
 
-  const status = document.querySelector("[data-form-status]");
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      status.textContent = getTranslation("form.sending");
 
-  form.addEventListener("submit", async (event) => {
-    event.preventDefault();
-    status.textContent = getTranslation("form.sending");
+      const formData = new FormData(form);
+      const payload = Object.fromEntries(formData.entries());
 
-    const formData = new FormData(form);
-    const payload = Object.fromEntries(formData.entries());
+      try {
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
 
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload)
-      });
+        const data = await response.json();
 
-      const data = await response.json();
+        if (!response.ok) {
+          throw new Error(data.message || getTranslation("contact.submit.errorGeneric"));
+        }
 
-      if (!response.ok) {
-        throw new Error(data.message || getTranslation("contact.submit.errorGeneric"));
+        status.textContent = normalizeContactStatus(data.message);
+        form.reset();
+      } catch (error) {
+        status.textContent = normalizeContactStatus(error.message);
       }
-
-      status.textContent = normalizeContactStatus(data.message);
-      form.reset();
-    } catch (error) {
-      status.textContent = normalizeContactStatus(error.message);
-    }
+    });
   });
 }
 

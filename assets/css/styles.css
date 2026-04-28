@@ -73,6 +73,88 @@ body::after {
   box-shadow: 0 12px 36px rgba(14, 42, 71, 0.08);
 }
 
+.top-contact-strip {
+  border-bottom: 1px solid rgba(14, 42, 71, 0.08);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.top-contact-inner {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0.55rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.top-contact-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  border: 1px solid rgba(14, 42, 71, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.4rem 0.6rem;
+  color: var(--ink);
+  text-decoration: none;
+  box-shadow: 0 14px 34px rgba(14, 42, 71, 0.06);
+}
+
+.top-contact-text {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.top-contact-icon,
+.top-contact-icon-link {
+  display: inline-flex;
+  width: 2rem;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(89, 165, 255, 0.18), rgba(255, 154, 98, 0.18));
+  color: var(--ink);
+  border: 1px solid rgba(14, 42, 71, 0.08);
+}
+
+.top-contact-icon-link {
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.top-contact-icon-link:hover {
+  transform: translateY(-1px);
+  border-color: rgba(89, 165, 255, 0.35);
+}
+
+.top-contact-number {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  text-decoration: none;
+  padding-inline: 0.25rem 0.4rem;
+}
+
+.top-contact-number:hover {
+  color: var(--accent);
+}
+
+.quick-quote-shell {
+  margin-top: 6rem;
+}
+
+.quick-quote-card {
+  background:
+    radial-gradient(circle at 16% 20%, rgba(89, 165, 255, 0.16), transparent 28%),
+    radial-gradient(circle at 84% 18%, rgba(255, 154, 98, 0.14), transparent 22%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.72));
+}
+
 .site-header-inner {
   max-width: 80rem;
   margin: 0 auto;
@@ -769,6 +851,20 @@ body::after {
 
   .site-header-inner {
     padding: 0.9rem 1rem;
+  }
+
+  .top-contact-inner {
+    padding: 0.5rem 1rem;
+    justify-content: center;
+    gap: 0.6rem;
+  }
+
+  .top-contact-text {
+    font-size: 0.78rem;
+  }
+
+  .top-contact-number {
+    font-size: 0.82rem;
   }
 
   .brand-logo {
